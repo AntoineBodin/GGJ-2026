@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 13f6c263902f044ea9e5c2de8ec12bb3
+guid: 68e2f1c66d1d14ff58a5e93439927c01
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9158349384845336690
-    second: rocket_0
+      213: -3184036925408172486
+    second: Nose_5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rocket_0
+      name: Nose_5_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 1
-        width: 20
-        height: 38
+        x: 23
+        y: 22
+        width: 15
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8f506be1c107e080800000000000000
-      internalID: -9158349384845336690
+      spriteID: a36a15d394700d3d0800000000000000
+      internalID: -3184036925408172486
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rocket_0: -9158349384845336690
+      Nose_5_0: -3184036925408172486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

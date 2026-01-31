@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6f58caa265b4e47ab91d597981ca2d6d
+guid: 1c42247d14bb7414582be9fe38993849
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3421103105593095975
-    second: Hair_3_0
+      213: -6074694560535812255
+    second: Mouth_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hair_3_0
+      name: Mouth_2_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 40
-        width: 42
-        height: 24
+        x: 21
+        y: 16
+        width: 21
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d8432be9dcc580d0800000000000000
-      internalID: -3421103105593095975
+      spriteID: 167e3487b7952bba0800000000000000
+      internalID: -6074694560535812255
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hair_3_0: -3421103105593095975
+      Mouth_2_0: -6074694560535812255
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
