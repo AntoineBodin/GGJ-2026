@@ -12,7 +12,7 @@ namespace Assets._Scripts.ScriptableObjects {
 
 		[SerializeField]
 		private List<Color> _backgroundColors;
-		public List<Color> BackgroundColors => _backgroundColors;
+		public List<Color> BackgroundColors => _backgroundColors; // TODO: change color to system with enum isRed for excample
 
 		[SerializeField]
 		private List<Color> _faceColors;

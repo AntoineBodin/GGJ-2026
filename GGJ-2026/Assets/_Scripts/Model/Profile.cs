@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace Assets._Scripts.Model {
-	internal class Profile {
+	public class Profile {
 		public string Name;
 		public ProfilePictureElements PictureElements;
 		public int Age;
