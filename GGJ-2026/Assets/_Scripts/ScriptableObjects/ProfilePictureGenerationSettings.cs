@@ -42,5 +42,9 @@ namespace Assets._Scripts.ScriptableObjects {
 		private List<Sprite> _noseShapes;
 		public List<Sprite> NoseShapes => _noseShapes;
 
+		[SerializeField]
+		private List<Sprite> _accessories;
+		public List<Sprite> Accessories => _accessories;
+
 	}
 }

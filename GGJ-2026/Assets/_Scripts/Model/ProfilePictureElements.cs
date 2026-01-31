@@ -11,5 +11,6 @@ namespace Assets._Scripts.Model {
 		public Color HairColor;
 		public Sprite MouthShapeSprite;
 		public Sprite NoseShapeSprite;
+		public Sprite AccessorySprite;
 	}
 }
