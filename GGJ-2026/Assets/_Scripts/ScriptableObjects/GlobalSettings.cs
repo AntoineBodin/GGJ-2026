@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "GlobalSettings", menuName = "Scriptable Objects/GlobalSettings")]
@@ -37,6 +39,10 @@ public class GlobalSettings : ScriptableObject
 	[SerializeField]
 	private uint _livesCount;
 	public uint LivesCount => _livesCount;
+
+	[SerializeField]
+	private List<Sprite> _crackSprites;
+	public List<Sprite> CrackSprites => _crackSprites;
 
 	[SerializeField]
 	private bool _resetLivesAfterDay = true;
