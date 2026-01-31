@@ -24,10 +24,9 @@ namespace Assets._Scripts.Managers {
 		[SerializeField]
 		private Button generateNewButton;
 
-		private void Awake() {
+		protected override void Awake() {
+			generateNewButton?.onClick.AddListener(() => {
 
-			generateNewButton.onClick.AddListener(() => {
-				
 				var profile = ProfileGenerator.Instance.GenerateProfile();
 				DisplayProfile(profile);
 			});

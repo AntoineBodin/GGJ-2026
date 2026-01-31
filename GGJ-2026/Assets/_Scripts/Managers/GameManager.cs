@@ -9,7 +9,7 @@ namespace Assets._Scripts.Managers {
 		[field: SerializeField]
 		public GlobalSettings GlobalSettings { get; private set; }
 		[field: SerializeField]
-		public RoundGenerationConfig config { get; private set; }
+		public RoundGenerationConfig Config { get; private set; }
 
 		public uint RemainingLives { get; private set; }
 
@@ -25,11 +25,10 @@ namespace Assets._Scripts.Managers {
 		private GeneratedRule _currentRule;
 
 		public GeneratedRule CurrentRule => _currentRule;
-		public RoundGenerationConfig Config => config;
 
 		private void Start() {
 			TutorialManager.Instance.OnTutorialEnded += StartGame;
-			_ruleGenerator = new RoundRuleGenerator(config);
+			_ruleGenerator = new RoundRuleGenerator(Config);
 			StartNewRound();
 		}
 

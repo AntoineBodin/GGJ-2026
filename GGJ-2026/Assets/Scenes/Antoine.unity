@@ -843,9 +843,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.00036767125
+    y: 0
     width: 1
-    height: 0.99926466
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1895,7 +1895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.GameManager
   <GlobalSettings>k__BackingField: {fileID: 11400000, guid: 52af894a4ee5ea3848cd3ca33bdf0b7b, type: 2}
-  <config>k__BackingField: {fileID: 0}
+  <config>k__BackingField: {fileID: 11400000, guid: 3e509e50b8c304fd3b8f58788c1bf701, type: 2}
 --- !u!114 &873596221
 MonoBehaviour:
   m_ObjectHideFlags: 0
