@@ -1,5 +1,5 @@
 namespace Assets._Scripts.Model {
-	internal enum Gender {
+	public enum Gender {
 		Male,
 		Female,
 		Other
