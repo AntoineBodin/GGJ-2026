@@ -1,3 +1,5 @@
+using Assets._Scripts.Model.Instructions.Comparators;
+
 namespace Assets._Scripts.Model.Instructions {
 	public abstract class InstructionBase<T> : IInstruction {
 		public T ExpectedValue { get; private set; }

@@ -14,8 +14,6 @@ namespace Assets._Scripts.Managers {
 		[SerializeField] float separationEpsilon = 0.01f;
 
 		Rigidbody2D rb;
-		Vector2 pendingNormal;
-		bool hasPendingBounce;
 
 		void Awake() {
 			rb = GetComponent<Rigidbody2D>();
@@ -28,27 +26,8 @@ namespace Assets._Scripts.Managers {
 
 		void Start() {
 			rb.AddForce(new Vector2(-1f, 1f).normalized * speed, ForceMode2D.Impulse);
-			//rb.linearVelocity = new Vector2(1f, 1f).normalized * speed;
+			float randomTorque = UnityEngine.Random.Range(-2f, 2f);
+			rb.AddTorque(randomTorque * 0.02f, ForceMode2D.Impulse);
 		}
-
-		/*void OnCollisionEnter2D(Collision2D collision) {
-			pendingNormal = collision.contacts[0].normal;
-			hasPendingBounce = true;
-		}*/
-/*
-		void FixedUpdate() {
-			if (!hasPendingBounce)
-				return;
-
-			Vector2 v = rb.linearVelocity;
-
-			Vector2 reflected = Vector2.Reflect(v, pendingNormal).normalized * speed;
-
-			// Small positional push to escape the collider
-			rb.position += pendingNormal * separationEpsilon;
-
-			rb.linearVelocity = reflected;
-			hasPendingBounce = false;
-		}*/
 	}
 }

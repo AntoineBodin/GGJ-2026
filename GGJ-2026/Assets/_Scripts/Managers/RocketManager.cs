@@ -6,7 +6,7 @@ namespace Assets._Scripts.Managers {
 	internal class RocketManager : MonoBehaviour {
 
 		private void Start() {
-			LaunchAnimation();
+			LaunchAnimation(true);
 		}
 
 		[SerializeField]
@@ -22,18 +22,29 @@ namespace Assets._Scripts.Managers {
 		private float animationDuration = 2f;
 
 		private const string ROCKET_LAUNCH_ANIM = "RocketLaunch";
+		[SerializeField]
+		private GameObject alienPrefab;
 
-		public void LaunchAnimation() {
+		[SerializeField]
+		private GameObject humanPrefab;
+
+		[SerializeField]
+		private GameObject passengerParent;
+
+		public void LaunchAnimation(bool isAlien) {
 			rocketImage.gameObject.SetActive(true);
 			rocketAnimator.Play(ROCKET_LAUNCH_ANIM);
 
-			StartCoroutine(LogMessageAfterDelay());
+			StartCoroutine(LaunchPassenger(isAlien));
 			StartCoroutine(HideAfterAnimation());
 		}
 
-		private IEnumerator LogMessageAfterDelay() {
+		private IEnumerator LaunchPassenger(bool isAlien) {
 			yield return new WaitForSeconds(messageDelay);
-			Debug.Log("Rocket launch - Message triggered!");
+			if (isAlien)
+				Instantiate(alienPrefab, passengerParent.transform.position, Quaternion.identity);
+			else
+				Instantiate(humanPrefab, passengerParent.transform.position, Quaternion.identity);
 		}
 
 		private IEnumerator HideAfterAnimation() {
