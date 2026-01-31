@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58940174f6a4b02498c5194f36fcc7d2, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.ScriptableObjects.ProfilePictureGenerationSettings
-  _faces: []
-  _backgroundColors: []
-  _faceColors: []
-  _eyeShapes: []
-  _eyeColors: []
-  _hairstyles: []
-  _hairColors: []
+  _faces:
+  - {fileID: 21300000, guid: a21ba7e06acf69f1f94dd8e241315827, type: 3}
+  - {fileID: 21300000, guid: 2128d72dc771084a0ac9312a7653effb, type: 3}
+  _backgroundColors: {fileID: 11400000, guid: 033bc6596e3291a86ad60e3ec843ce5b, type: 2}
+  _faceColors: {fileID: 11400000, guid: 1b005b03aadd0d50a841611b43592b3c, type: 2}
+  _eyeShapes:
+  - {fileID: 21300000, guid: a21ba7e06acf69f1f94dd8e241315827, type: 3}
+  - {fileID: 21300000, guid: f8f0da9a0d5a6710d86a91149000e5b1, type: 3}
+  _eyeColors: {fileID: 11400000, guid: 75125361655c343f68595637c7e3237e, type: 2}
+  _hairstyles:
+  - {fileID: 21300000, guid: 922371a13580736b09931f8b294b3231, type: 3}
+  - {fileID: 21300000, guid: 5aa4600b669bd7eb08a217f88d898f18, type: 3}
+  _hairColors: {fileID: 11400000, guid: 09b534e9761b810f1962922312fd488b, type: 2}

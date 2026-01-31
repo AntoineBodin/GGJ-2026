@@ -11,27 +11,27 @@ namespace Assets._Scripts.ScriptableObjects {
 		public List<Sprite> Faces => _faces;
 
 		[SerializeField]
-		private List<Color> _backgroundColors;
-		public List<Color> BackgroundColors => _backgroundColors; // TODO: change color to system with enum isRed for excample
+		private GameColors _backgroundColors;
+		public GameColors BackgroundColors => _backgroundColors;
 
 		[SerializeField]
-		private List<Color> _faceColors;
-		public List<Color> FaceColors => _faceColors;
+		private GameColors _faceColors;
+		public GameColors FaceColors => _faceColors;
 
 		[SerializeField]
 		private List<Sprite> _eyeShapes;
 		public List<Sprite> EyeShapes => _eyeShapes;
 
 		[SerializeField]
-		private List<Color> _eyeColors;
-		public List<Color> EyeColors => _eyeColors;
+		private GameColors _eyeColors;
+		public GameColors EyeColors => _eyeColors;
 
 		[SerializeField]
 		private List<Sprite> _hairstyles;
 		public List<Sprite> Hairstyles => _hairstyles;
 
 		[SerializeField]
-		private List<Color> _hairColors;
-		public List<Color> HairColors => _hairColors;
+		private GameColors _hairColors;
+		public GameColors HairColors => _hairColors;
 	}
 }
