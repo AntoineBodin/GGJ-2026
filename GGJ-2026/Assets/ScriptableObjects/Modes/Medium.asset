@@ -22,3 +22,4 @@ MonoBehaviour:
   _livesCount: 0
   _crackSprites: []
   _resetLivesAfterDay: 1
+  _buttonClickVolume: 1

@@ -34,6 +34,7 @@ namespace Assets._Scripts.Managers {
 		public void LaunchAnimation(bool isAlien) {
 			rocketImage.gameObject.SetActive(true);
 			rocketAnimator.Play(ROCKET_LAUNCH_ANIM);
+			SFXManager.Instance.PlayOneShot("rocket", 1f, 1f, 1.1f);
 
 			StartCoroutine(LaunchPassenger(isAlien));
 			StartCoroutine(HideAfterAnimation());
