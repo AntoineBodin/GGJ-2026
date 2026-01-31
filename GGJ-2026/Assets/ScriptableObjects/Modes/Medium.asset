@@ -18,6 +18,7 @@ MonoBehaviour:
   _attributesCountMin: 0
   _attributesCountMax: 0
   _daysCount: 0
-  _dayDurationSecond: 300
+  _dayDurationSecond: 120
   _livesCount: 0
+  _crackSprites: []
   _resetLivesAfterDay: 1

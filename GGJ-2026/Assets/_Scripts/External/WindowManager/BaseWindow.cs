@@ -1,10 +1,12 @@
 ﻿using System;
+
 using Assets._Scripts.Managers;
+
 using DG.Tweening;
+
 using UnityEngine;
 
-public class BaseWindow : MonoBehaviour
-{
+public class BaseWindow : MonoBehaviour {
 	[SerializeField]
 	private RectTransform _windowContainer;
 
@@ -14,30 +16,23 @@ public class BaseWindow : MonoBehaviour
 	protected bool _isShown => _canvas.enabled;
 	private Canvas _canvas;
 
-	private void Awake()
-	{
+	private void Awake() {
 		_canvas = GetComponent<Canvas>();
 	}
 
-	private void OnEnable()
-	{
+	private void OnEnable() {
 		GameManager.OnGameStateChanged += HandleStateChanged;
 	}
 
-	private void HandleStateChanged(GameState newState)
-	{
-		if (newState == TargetState)
-		{
+	private void HandleStateChanged(GameState newState) {
+		if (newState == TargetState) {
 			ShowWindow();
-		}
-		else
-		{
+		} else {
 			HideWindow();
 		}
 	}
 
-	private void ShowWindow()
-	{
+	private void ShowWindow() {
 		OnWindowStartShowing?.Invoke();
 		GetComponent<Canvas>().enabled = true;
 		_windowContainer.localScale = Vector3.zero;
@@ -48,8 +43,7 @@ public class BaseWindow : MonoBehaviour
 			.OnComplete(() => OnWindowShown?.Invoke());
 	}
 
-	private void HideWindow()
-	{
+	private void HideWindow() {
 		_windowContainer
 			.DOScale(Vector3.zero, 0.25f)
 			.SetEase(Ease.InBack)
@@ -59,12 +53,8 @@ public class BaseWindow : MonoBehaviour
 }
 
 [System.Flags]
-public enum GameState
-{
+public enum GameState {
 	None = 0,
 	Playing = 1 << 0,
-	Upgrade = 1 << 1,
-	Trading = 1 << 2,
-	WinningScreen = 1 << 3,
-	Leaderboard = 1 << 4,
+	EndingScreen = 1 << 1,
 }

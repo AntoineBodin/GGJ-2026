@@ -5,29 +5,24 @@ using UnityEngine;
 namespace Assets._Scripts.Managers {
 	internal class GameManager : SingletonBehaviour<GameManager> {
 		[field: SerializeField]
-		public GlobalSettings globalSettings { get; private set; }
+		public GlobalSettings GlobalSettings { get; private set; }
 
 		public uint RemainingLives { get; private set; }
-		public float DaySecondsPassed { get; private set; }
 
 		public GameState CurrentGameState { get; private set; }
 		public static Action<GameState> OnGameStateChanged { get; set; }
 		public static event Action<int> OnResetGame;
 		public static event Action OnStartGame;
+		public static event Action OnStartDay;
 
 		private void Start() {
 			TutorialManager.Instance.OnTutorialEnded += StartGame;
 		}
 
-		private void Update() {
-			if (CurrentGameState == GameState.Playing)
-				DaySecondsPassed += Time.deltaTime;
-		}
-
 		private void StartGame() {
 			UpdateGameState(GameState.Playing);
 			OnStartGame?.Invoke();
-			RemainingLives = globalSettings.LivesCount;
+			StartNewRound();
 		}
 
 		public void UpdateGameState(GameState newGameState) {
@@ -36,13 +31,9 @@ namespace Assets._Scripts.Managers {
 			switch (newGameState) {
 				case GameState.Playing:
 					break;
-				case GameState.Upgrade:
-					break;
 				case GameState.None:
 					break;
-				case GameState.Trading:
-					break;
-				case GameState.WinningScreen:
+				case GameState.EndingScreen:
 					break;
 			}
 
@@ -50,15 +41,15 @@ namespace Assets._Scripts.Managers {
 		}
 
 		public void StartNewRound() {
+			OnStartDay?.Invoke();
 			// Generate new tree
 			// Generate Alien profiles
 			// Generate Humans profiles
 			// Generate human readable instructions
 			// Show first profile
 
-			if (globalSettings.ResetLivesAfterDay)
-				RemainingLives = globalSettings.LivesCount;
-			DaySecondsPassed = 0;
+			if (GlobalSettings.ResetLivesAfterDay)
+				RemainingLives = GlobalSettings.LivesCount;
 		}
 
 		public void OnError() {
