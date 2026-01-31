@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256ebf2be9d2c0e349daa1072ad6f1cb, type: 3}
+  m_Name: BackgroundColor
+  m_EditorClassIdentifier: Assembly-CSharp::GameColors
+  _colors:
+  - _name: Red
+    _color: {r: 1, g: 0.24056602, b: 0.2694137, a: 1}
+  - _name: Pink
+    _color: {r: 1, g: 0.6367924, b: 0.76876646, a: 1}
+  - _name: Blue
+    _color: {r: 0.13011748, g: 0.2502171, b: 0.6415094, a: 1}
+  - _name: LightBlue
+    _color: {r: 0.3537736, g: 0.85284144, b: 1, a: 1}
+  - _name: Green
+    _color: {r: 0.6931695, g: 1, b: 0.2216981, a: 1}
+  - _name: Orange
+    _color: {r: 1, g: 0.6383666, b: 0, a: 1}
+  - _name: Purple
+    _color: {r: 0.5176471, g: 0.4392157, b: 1, a: 1}
