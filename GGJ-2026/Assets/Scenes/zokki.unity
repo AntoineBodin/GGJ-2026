@@ -727,6 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.GameManager
   <GlobalSettings>k__BackingField: {fileID: 11400000, guid: 52af894a4ee5ea3848cd3ca33bdf0b7b, type: 2}
+  <config>k__BackingField: {fileID: 11400000, guid: 3e509e50b8c304fd3b8f58788c1bf701, type: 2}
 --- !u!1 &953651634
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,24 +10,20 @@ namespace Assets._Scripts.Managers {
 		public float DaySecondsPassed { get; private set; }
 		public static event Action OnTimePassed;
 
-		private GameManager gameManager;
-
 		protected override void Awake() {
-			gameManager = GameManager.Instance;
 			GameManager.OnStartDay += () => {
 				DaySecondsPassed = 0;
 			};
 		}
 
 		private void Update() {
-
 			DaySecondsPassed += Time.deltaTime;
-			if (DaySecondsPassed >= gameManager.GlobalSettings.DayDurationSecond) {
+			if (DaySecondsPassed >= GameManager.Instance.GlobalSettings.DayDurationSecond) {
 				OnTimePassed?.Invoke();
-				gameManager.UpdateGameState(GameState.EndingScreen);
+				GameManager.Instance.UpdateGameState(GameState.EndingScreen);
 			}
 
-			float percentage = DaySecondsPassed / gameManager.GlobalSettings.DayDurationSecond;
+			float percentage = DaySecondsPassed / GameManager.Instance.GlobalSettings.DayDurationSecond;
 			float angle = Mathf.Lerp(16f, -62f, percentage);
 			RectTransform rect = (RectTransform)Sun.transform;
 			rect.localRotation = Quaternion.Euler(0f, 0f, angle);
