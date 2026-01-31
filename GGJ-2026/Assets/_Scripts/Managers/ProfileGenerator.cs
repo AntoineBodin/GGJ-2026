@@ -345,8 +345,10 @@ namespace Assets._Scripts.Managers {
 				result.AccessorySprite = ProfilePictureGenerationSettings.Accessories[
 					Random.Range(0, ProfilePictureGenerationSettings.Accessories.Count)
 				];
+			}else {
+				result.AccessorySprite = null;
 			}
-			return result;
+				return result;
 		}
 
 		private float GenerateHeight() {

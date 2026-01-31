@@ -18,6 +18,8 @@ namespace Assets._Scripts.Managers {
 		protected Image Nose { get; private set; }
 		[field: SerializeField]
 		protected Image Mouth { get; private set; }
+		[field: SerializeField]
+		protected Image Accessory { get; private set; }
 
 		[SerializeField]
 		private Button generateNewButton;
@@ -41,6 +43,12 @@ namespace Assets._Scripts.Managers {
 			Eyes.color = profile.PictureElements.EyeColor;
 			Nose.sprite = profile.PictureElements.NoseShapeSprite;
 			Mouth.sprite = profile.PictureElements.MouthShapeSprite;
+			if (profile.PictureElements.AccessorySprite != null) {
+				Accessory.sprite = profile.PictureElements.AccessorySprite;
+				Accessory.enabled = true;
+			} else {
+				Accessory.enabled = false;
+			}
 		}
 	}
 }
