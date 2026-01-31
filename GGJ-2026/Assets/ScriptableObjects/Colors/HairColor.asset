@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256ebf2be9d2c0e349daa1072ad6f1cb, type: 3}
+  m_Name: HairColor
+  m_EditorClassIdentifier: Assembly-CSharp::GameColors
+  _colors:
+  - _name: Ginger
+    _color: {r: 1, g: 0.5470033, b: 0.18396229, a: 1}
+  - _name: Brunette
+    _color: {r: 0.4056604, g: 0.13968495, b: 0.15188569, a: 1}
+  - _name: Blonde
+    _color: {r: 1, g: 0.8735379, b: 0.4575472, a: 1}
+  - _name: Black
+    _color: {r: 0.20754719, g: 0.14978641, b: 0.16674851, a: 1}
+  - _name: Red
+    _color: {r: 1, g: 0.105882354, b: 0.12941177, a: 1}
+  - _name: Pink
+    _color: {r: 1, g: 0.4392157, b: 0.98354757, a: 1}
+  - _name: Blue
+    _color: {r: 0.28773582, g: 0.7479212, b: 1, a: 1}
+  - _name: Green
+    _color: {r: 0.30279732, g: 1, b: 0.28773582, a: 1}
