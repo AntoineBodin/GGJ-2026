@@ -166,18 +166,13 @@ namespace Assets._Scripts.Managers {
 						instruction = CreateIntInstruction(config.AttributeType, alienOnlyMax, new LowerOrEqualsComparator<int>());
 						description = $"{config.AttributeType} <= {alienOnlyMax}";
 					} else {
-						// Complete overlap - use range-based rule instead of exact match
-						// This allows aliens to have varied values while still being detectable
+						// Complete overlap - need BOTH boundaries to define alien range
 						alienValue = Random.Range(alienMin, alienMax + 1);
 
-						// Randomly choose >= or <= for variety
-						if (Random.value > 0.5f) {
-							instruction = CreateIntInstruction(config.AttributeType, alienMin, new GreaterOrEqualsComparator<int>());
-							description = $"{config.AttributeType} >= {alienMin}";
-						} else {
-							instruction = CreateIntInstruction(config.AttributeType, alienMax, new LowerOrEqualsComparator<int>());
-							description = $"{config.AttributeType} <= {alienMax}";
-						}
+						var lowerBound = CreateIntInstruction(config.AttributeType, alienMin, new GreaterOrEqualsComparator<int>());
+						var upperBound = CreateIntInstruction(config.AttributeType, alienMax, new LowerOrEqualsComparator<int>());
+						instruction = new AndInstruction(new List<IInstruction> { lowerBound, upperBound });
+						description = $"{config.AttributeType} >= {alienMin} AND <= {alienMax}";
 					}
 				}
 			}
@@ -224,17 +219,13 @@ namespace Assets._Scripts.Managers {
 						instruction = CreateFloatInstruction(config.AttributeType, alienOnlyMax, new LowerOrEqualsComparator<float>());
 						description = $"{config.AttributeType} <= {alienOnlyMax:F2}";
 					} else {
-						// Complete overlap - use range-based rule instead of exact match
+						// Complete overlap - need BOTH boundaries to define alien range
 						alienValue = Random.Range(config.AlienMin, config.AlienMax);
 
-						// Randomly choose >= or <= for variety
-						if (Random.value > 0.5f) {
-							instruction = CreateFloatInstruction(config.AttributeType, config.AlienMin, new GreaterOrEqualsComparator<float>());
-							description = $"{config.AttributeType} >= {config.AlienMin:F2}";
-						} else {
-							instruction = CreateFloatInstruction(config.AttributeType, config.AlienMax, new LowerOrEqualsComparator<float>());
-							description = $"{config.AttributeType} <= {config.AlienMax:F2}";
-						}
+						var lowerBound = CreateFloatInstruction(config.AttributeType, config.AlienMin, new GreaterOrEqualsComparator<float>());
+						var upperBound = CreateFloatInstruction(config.AttributeType, config.AlienMax, new LowerOrEqualsComparator<float>());
+						instruction = new AndInstruction(new List<IInstruction> { lowerBound, upperBound });
+						description = $"{config.AttributeType} >= {config.AlienMin:F2} AND <= {config.AlienMax:F2}";
 					}
 				}
 			}
