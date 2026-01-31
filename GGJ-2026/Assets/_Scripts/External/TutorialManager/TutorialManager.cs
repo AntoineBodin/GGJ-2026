@@ -456,7 +456,6 @@ public class TutorialManager : SingletonBehaviour<TutorialManager>
 		void Handler()
 		{
 			buttonClickSatisfied = true;
-			SFXManager.Instance.PlayButtonSound();
 			ReenableTempButtons();
 		}
 		step.runtimeHandler = Handler;
