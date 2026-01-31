@@ -2,55 +2,54 @@
 
 namespace Assets._Scripts.Managers
 {
-    internal class GameManager : SingletonBehaviour<GameManager>
-    {
-        private GameState _gameState;
-        
-        public static Action<GameState> OnGameStateChanged { get; set; }
-        public GameState CurrentGameState => _gameState;
+	internal class GameManager : SingletonBehaviour<GameManager>
+	{
+		private GameState _gameState;
 
-        public static event Action<int> OnResetGame;
-        public static event Action OnStartGame;
+		public static Action<GameState> OnGameStateChanged { get; set; }
+		public GameState CurrentGameState => _gameState;
 
-        private int prestigeLevel = 0;
+		public static event Action<int> OnResetGame;
+		public static event Action OnStartGame;
 
-        private void Start()
-        {
-            TutorialManager.Instance.OnTutorialEnded += StartGame;
-        }
+		private int prestigeLevel = 0;
 
-        private void StartGame() 
-        { 
-            UpdateGameState(GameState.Playing);
-            OnStartGame?.Invoke();
-        }
+		private void Start()
+		{
+			TutorialManager.Instance.OnTutorialEnded += StartGame;
+		}
 
-        public void UpdateGameState(GameState newGameState)
-        {
-            _gameState = newGameState;
+		private void StartGame()
+		{
+			UpdateGameState(GameState.Playing);
+			OnStartGame?.Invoke();
+		}
 
-            switch (newGameState)
-            {
-                case GameState.Playing:
-                    break;
-                case GameState.Upgrade:
-                    break;
-                case GameState.None:
-                    break;
-                case GameState.Trading:
-                    break;
-                case GameState.WinningScreen:
-                    break;
-            }
+		public void UpdateGameState(GameState newGameState)
+		{
+			_gameState = newGameState;
 
-            OnGameStateChanged?.Invoke(newGameState);
-        }
+			switch (newGameState)
+			{
+				case GameState.Playing:
+					break;
+				case GameState.Upgrade:
+					break;
+				case GameState.None:
+					break;
+				case GameState.Trading:
+					break;
+				case GameState.WinningScreen:
+					break;
+			}
 
-        internal void RestartGame()
-        {
-            prestigeLevel++;
-            OnResetGame?.Invoke(prestigeLevel);
-        }       
+			OnGameStateChanged?.Invoke(newGameState);
+		}
 
-    }
+		internal void RestartGame()
+		{
+			prestigeLevel++;
+			OnResetGame?.Invoke(prestigeLevel);
+		}
+	}
 }
