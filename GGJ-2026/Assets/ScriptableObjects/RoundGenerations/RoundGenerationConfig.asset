@@ -34,7 +34,7 @@ MonoBehaviour:
     HumanMax: 1.9
     AlienMin: 1.9
     AlienMax: 2.2
-  - AttributeType: 1
+  - AttributeType: 2
     Enabled: 1
     Weight: 1
     HumanMin: 3
