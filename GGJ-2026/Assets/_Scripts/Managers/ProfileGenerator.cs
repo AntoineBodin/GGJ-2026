@@ -11,7 +11,8 @@ namespace Assets._Scripts.Managers {
 		public ProfileGenerationSettings ProfileGenerationSettings;
 		public ProfilePictureGenerationSettings ProfilePictureGenerationSettings;
 
-		private void Awake() {
+		protected override void Awake() {
+			base.Awake();
 			for (int i = 0; i < 25; i++) {
 				GenerateProfile();
 			}

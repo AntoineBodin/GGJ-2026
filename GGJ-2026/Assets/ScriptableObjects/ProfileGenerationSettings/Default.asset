@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f493fc2c5c5ff8d44bdffe9ab0d689cf, type: 3}
   m_Name: Default
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.ScriptableObjects.ProfileGenerationSettings
-  FirstNamesMale: []
-  FirstNamesFemale: []
-  LastNames: []
-  Interests: []
-  Bios: []
+  FirstNamesMale:
+  - Name
+  FirstNamesFemale:
+  - Fe
+  LastNames:
+  - Last
+  Interests:
+  - Me
+  Bios:
+  - Bio
   _minAge: 18
   _maxAge: 99
   _ageRandomFunction:
