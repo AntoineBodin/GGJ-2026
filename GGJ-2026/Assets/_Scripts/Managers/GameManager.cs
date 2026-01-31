@@ -1,11 +1,15 @@
 using System;
 
+using Assets._Scripts.ScriptableObjects;
+
 using UnityEngine;
 
 namespace Assets._Scripts.Managers {
 	internal class GameManager : SingletonBehaviour<GameManager> {
 		[field: SerializeField]
 		public GlobalSettings GlobalSettings { get; private set; }
+		[field: SerializeField]
+		public RoundGenerationConfig config { get; private set; }
 
 		public uint RemainingLives { get; private set; }
 
@@ -14,9 +18,19 @@ namespace Assets._Scripts.Managers {
 		public static event Action<int> OnResetGame;
 		public static event Action OnStartGame;
 		public static event Action OnStartDay;
+		public static event Action<GeneratedRule> OnNewRound;
+
+		private int prestigeLevel = 0;
+		private RoundRuleGenerator _ruleGenerator;
+		private GeneratedRule _currentRule;
+
+		public GeneratedRule CurrentRule => _currentRule;
+		public RoundGenerationConfig Config => config;
 
 		private void Start() {
 			TutorialManager.Instance.OnTutorialEnded += StartGame;
+			_ruleGenerator = new RoundRuleGenerator(config);
+			StartNewRound();
 		}
 
 		private void StartGame() {
@@ -47,6 +61,12 @@ namespace Assets._Scripts.Managers {
 			// Generate Humans profiles
 			// Generate human readable instructions
 			// Show first profile
+			_currentRule = _ruleGenerator.GenerateRule();
+			OnNewRound?.Invoke(_currentRule);
+			Debug.Log($"New round started with {_currentRule.Instructions.Count} detection rules:");
+			foreach (var instruction in _currentRule.Instructions) {
+				Debug.Log($"  - {instruction.Description}");
+			}
 
 			if (GlobalSettings.ResetLivesAfterDay)
 				RemainingLives = GlobalSettings.LivesCount;
@@ -59,10 +79,6 @@ namespace Assets._Scripts.Managers {
 				Debug.Log("Game Over");
 				// TODO : Show Game Over Screen
 			}
-		}
-
-		public void OnNewRound() {
-
 		}
 	}
 }
