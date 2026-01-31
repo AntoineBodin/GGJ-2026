@@ -13,15 +13,174 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.ScriptableObjects.ProfileGenerationSettings
   FirstNamesMale:
-  - Name
+  - Antoine
+  - Tim
+  - Anton
+  - Dmitrii
+  - Catalin
+  - Matheus
+  - Yannick
+  - Russell
+  - Ahmed
+  - Ibo
+  - Atil
+  - Enes
+  - Alex
+  - Johannes
+  - Leto
+  - Isak
+  - Luis Mix
+  - Greg
+  - Julian
+  - Rob
+  - Daniel
+  - Karu
+  - Abbas
+  - Abdullah
+  - Michael
+  - Ferhat
+  - Lex
+  - Carlo
+  - Sepehr
+  - Markus
+  - Chris
+  - Juri
+  - Erik
+  - Oliver
+  - Noah
+  - Dachy
+  - Aron
+  - Jose
+  - Anto
+  - Cleme
+  - Sebastien
+  - Ayoub
+  - Shervin
+  - Israel
+  - Felix
+  - Sergei
+  - Ilya
+  - Mario
   FirstNamesFemale:
-  - Fe
+  - Jessica
+  - Michelle
+  - Yanru
+  - Polina
+  - Maxi
+  - Christina
+  - Kelly
+  - Ilke
+  - Rong
+  - Lada
+  - Lucy
+  - Tee
+  - Grace
+  - Ivy
+  - Thamiris
+  - Gabriela
+  - Somayeh
+  - Lunay
+  - Camilla
+  - Nika
+  - Sophie
+  - Beyza
+  - Dasha
+  - Manon
   LastNames:
-  - Last
+  - Mueller
+  - Schmidt
+  - Schneider
+  - Fischer
+  - Weber
+  - Gruber
+  - Peeters
+  - Ivanov
+  - Horvat
+  - Georgiou
+  - Novak
+  - Nielsen
+  - Tamm
+  - Korhonen
+  - Martin
+  - Mueller
+  - Papadopoulos
+  - Nagy
+  - Murphy
+  - Rossi
+  - Berzins
+  - Kazlauskas
+  - Schmit
+  - Borg
+  - De Jong
+  - Nowak
+  - Silva
+  - Popa
+  - Varga
+  - Novak
+  - Garcia
+  - Andersson
+  - Yilmaz
+  - Ahmed
+  - Wang
+  - Smith
+  - Petrov
+  - Gonzalez
+  - Sato
+  - Kim
+  - Nguyen
   Interests:
-  - Me
-  Bios:
-  - Bio
+  - Space travelling
+  - Rocket science
+  - Humans
+  - Cows
+  - Area 51 merch
+  - Crop circles
+  - Conspiracy theories
+  - Bureaucracy
+  - Beer
+  - Game Design
+  - Game Development
+  - Programming
+  - QA
+  - Sci-Fi movies
+  - Deutsche lernen
+  - Berlin clubs
+  - Linkedin
+  - Global Game Jam
+  - Itch.io games
+  - Board games
+  - Idle Games
+  - Riding a bike
+  - Scientology
+  - Art
+  - Drawing
+  - Pixel Art
+  - Shoplifting
+  - Star Wars
+  - Space Invaders
+  - Foil hats
+  - Cooking
+  - Quantum physics
+  - Comic books
+  - Pokemon cards
+  - Linux
+  - Cyberpunk
+  - Black holes
+  - LEGO
+  - D&D
+  - NASA documentaries
+  - Pfand collecting
+  - Cosplay
+  - 3D printing
+  - Astronomy
+  - Astrology
+  - Writing fanfiction
+  - Twitch streaming
+  - Anime
+  - Minecraft
+  - Skyrim
+  - Undertale
+  Bios: []
   _minAge: 18
   _maxAge: 99
   _ageRandomFunction:
@@ -58,7 +217,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   _minInterests: 3
-  _maxInterests: 10
+  _maxInterests: 5
   minHeight: 1.4
   maxHeight: 2.4
   _heightRandomFunction:
