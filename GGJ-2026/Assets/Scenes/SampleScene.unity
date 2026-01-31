@@ -219,9 +219,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.00027900934
     width: 1
-    height: 1
+    height: 0.999442
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -357,111 +357,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &873596214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 873596216}
-  - component: {fileID: 873596215}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &873596215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873596214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 485d662e3bb3e984a9ba832a8c8e6df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TutorialManager
-  DialogueBox: {fileID: 0}
-  dialogueText: {fileID: 0}
-  canSkipIndicator: {fileID: 0}
-  overlay: {fileID: 0}
-  worldCamera: {fileID: 0}
-  canvasesToDisableAllButtonsIn: []
-  individualButtonsToDisable: []
-  enableTypewriter: 1
-  defaultTypewriterCharsPerSecond: 40
-  enableArrow: 1
-  arrow: {fileID: 0}
-  arrowAngleForUI: 0
-  arrowAngleForWorld: 0
-  arrowUIOffset: {x: 0, y: -40}
-  arrowWorldOffset: {x: 0, y: -2}
-  overrideDialogBoxTransform: 0
-  defaultDialogBoxTransform:
-    anchoredPosition: {x: 0, y: 0}
-    sizeDelta: {x: 0, y: 0}
-    pivot: {x: 0, y: 0}
-    anchorMin: {x: 0, y: 0}
-    anchorMax: {x: 0, y: 0}
-    IsEnabled: 0
-  steps:
-  - dialogue: 
-    useTypewriter: 0
-    overrideTypewriterSpeed: 0
-    typewriterCharsPerSecond: 0
-    type: 0
-    worldTarget: {fileID: 0}
-    buttonTarget: {fileID: 0}
-    showArrow: 0
-    overrideArrowTransform: 0
-    arrowPosition: {x: 0, y: 0}
-    arrowRotation: 0
-    preStepEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    postStepEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    enableOverrideDialogBoxTransform: 0
-    OverrideDialogBoxTransform:
-      anchoredPosition: {x: 0, y: 0}
-      sizeDelta: {x: 0, y: 0}
-      pivot: {x: 0, y: 0}
-      anchorMin: {x: 0, y: 0}
-      anchorMax: {x: 0, y: 0}
-      IsEnabled: 0
-  useCallbacks: 1
-  minDelayBeforeSkip: 0.3
-  dialogueSkipKeys: 2000000043010000
-  allowSkipAll: 1
-  skipAllKey: 27
-  enableClickableTween: 1
-  enableClickableTweenForButtons: 1
-  enableClickableTweenForWorld: 1
-  targetScale: {x: 1.2, y: 1.2, z: 1.2}
-  duration: 1
-  loops: -1
-  ease: 4
---- !u!4 &873596216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873596214}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1186306276
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +436,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1744611869
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1744611871}
+  - component: {fileID: 1744611870}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1744611870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744611869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711a7141b88111a468dce4c53be40fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.ProfileGenerator
+  ProfileGenerationSettings: {fileID: 11400000, guid: 9186b28c52922d744a63304b0635025c, type: 2}
+  ProfilePictureGenerationSettings: {fileID: 11400000, guid: 88cadb1d20b4dd047a7cbe47e4f3177a, type: 2}
+--- !u!4 &1744611871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744611869}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -548,4 +489,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1186306279}
-  - {fileID: 873596216}
+  - {fileID: 1744611871}
