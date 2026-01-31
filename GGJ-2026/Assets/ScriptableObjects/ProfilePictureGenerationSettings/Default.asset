@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.ScriptableObjects.ProfilePictureGenerationSettings
   _faces:
-  - {fileID: 21300000, guid: a21ba7e06acf69f1f94dd8e241315827, type: 3}
+  - {fileID: 21300000, guid: 776edf0c52c2ae7268a354f288d0c9df, type: 3}
   - {fileID: 21300000, guid: 2128d72dc771084a0ac9312a7653effb, type: 3}
   _backgroundColors: {fileID: 11400000, guid: 033bc6596e3291a86ad60e3ec843ce5b, type: 2}
   _faceColors: {fileID: 11400000, guid: 1b005b03aadd0d50a841611b43592b3c, type: 2}

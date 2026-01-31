@@ -1,33 +1,37 @@
 using System;
 
-using Unity.VisualScripting;
-
 using UnityEngine;
 
 namespace Assets._Scripts.Managers {
 	internal class GameManager : SingletonBehaviour<GameManager> {
-		private GameState _gameState;
+		[field: SerializeField]
+		public GlobalSettings globalSettings { get; private set; }
+
+		public uint RemainingLives { get; private set; }
+		public float DaySecondsPassed { get; private set; }
+
+		public GameState CurrentGameState { get; private set; }
 		public static Action<GameState> OnGameStateChanged { get; set; }
-		public GameState CurrentGameState => _gameState;
 		public static event Action<int> OnResetGame;
 		public static event Action OnStartGame;
-
-		private uint remainingLives;
-		[SerializeField]
-		private GlobalSettings globalSettings;
 
 		private void Start() {
 			TutorialManager.Instance.OnTutorialEnded += StartGame;
 		}
 
+		private void Update() {
+			//	if (CurrentGameState == GameState.Playing)
+			DaySecondsPassed += Time.deltaTime;
+		}
+
 		private void StartGame() {
 			UpdateGameState(GameState.Playing);
 			OnStartGame?.Invoke();
-			remainingLives = globalSettings.LivesCount;
+			RemainingLives = globalSettings.LivesCount;
 		}
 
 		public void UpdateGameState(GameState newGameState) {
-			_gameState = newGameState;
+			CurrentGameState = newGameState;
 
 			switch (newGameState) {
 				case GameState.Playing:
@@ -45,22 +49,21 @@ namespace Assets._Scripts.Managers {
 			OnGameStateChanged?.Invoke(newGameState);
 		}
 
-		public void StartNewRound()
-		{
+		public void StartNewRound() {
 			// Generate new tree
 			// Generate Alien profiles
 			// Generate Humans profiles
 			// Generate human readable instructions
 			// Show first profile
-			// Reset lives?
 
 			if (globalSettings.ResetLivesAfterDay)
-				remainingLives = globalSettings.LivesCount;
+				RemainingLives = globalSettings.LivesCount;
+			DaySecondsPassed = 0;
 		}
 
 		public void OnError() {
-			remainingLives--;
-			if (remainingLives == 0) {
+			RemainingLives--;
+			if (RemainingLives == 0) {
 				UpdateGameState(GameState.None);
 				Debug.Log("Game Over");
 				// TODO : Show Game Over Screen
@@ -68,7 +71,7 @@ namespace Assets._Scripts.Managers {
 		}
 
 		public void OnNewRound() {
-			
+
 		}
 	}
 }

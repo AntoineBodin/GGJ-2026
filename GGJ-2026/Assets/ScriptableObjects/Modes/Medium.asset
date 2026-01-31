@@ -10,5 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a893c102262e892aaa19faa8dfa1f15f, type: 3}
-  m_Name: MediumMode
+  m_Name: Medium
   m_EditorClassIdentifier: Assembly-CSharp::Test
+  _profilesPerDay: 0
+  _alienPercentagePerDayMin: 0
+  _alienPercentagePerDayMax: 0
+  _attributesCountMin: 0
+  _attributesCountMax: 0
+  _daysCount: 0
+  _dayDurationSecond: 300
+  _livesCount: 0
+  _resetLivesAfterDay: 1
