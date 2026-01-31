@@ -20,8 +20,8 @@ namespace Assets._Scripts.Managers {
 		}
 
 		private void Update() {
-			//	if (CurrentGameState == GameState.Playing)
-			DaySecondsPassed += Time.deltaTime;
+			if (CurrentGameState == GameState.Playing)
+				DaySecondsPassed += Time.deltaTime;
 		}
 
 		private void StartGame() {
