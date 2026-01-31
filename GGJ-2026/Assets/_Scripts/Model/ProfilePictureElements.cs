@@ -9,5 +9,7 @@ namespace Assets._Scripts.Model {
 		public Color EyeColor;
 		public Sprite HairstyleSprite;
 		public Color HairColor;
+		public Sprite MouthShapeSprite;
+		public Sprite NoseShapeSprite;
 	}
 }

@@ -332,6 +332,12 @@ namespace Assets._Scripts.Managers {
 				HairColor = ProfilePictureGenerationSettings.HairColors.Colors[
 					Random.Range(0, ProfilePictureGenerationSettings.HairColors.Colors.Count)
 				].Color,
+				MouthShapeSprite = ProfilePictureGenerationSettings.MouthShapes[
+					Random.Range(0, ProfilePictureGenerationSettings.MouthShapes.Count)
+				],
+				NoseShapeSprite = ProfilePictureGenerationSettings.NoseShapes[
+					Random.Range(0, ProfilePictureGenerationSettings.NoseShapes.Count)
+					]
 			};
 		}
 

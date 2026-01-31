@@ -1,4 +1,5 @@
 using Assets._Scripts.Model;
+using Assets._Scripts.ScriptableObjects;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,22 @@ namespace Assets._Scripts.Managers {
 		protected Image Face { get; private set; }
 		[field: SerializeField]
 		protected Image Eyes { get; private set; }
+		[field: SerializeField]
+		protected Image Nose { get; private set; }
+		[field: SerializeField]
+		protected Image Mouth { get; private set; }
+
+		[SerializeField]
+		private Button generateNewButton;
+
+		private void Awake() {
+
+			generateNewButton.onClick.AddListener(() => {
+				
+				var profile = ProfileGenerator.Instance.GenerateProfile();
+				DisplayProfile(profile);
+			});
+		}
 
 		public void DisplayProfile(Profile profile) {
 			Background.color = profile.PictureElements.BackgroundColor;
@@ -22,6 +39,8 @@ namespace Assets._Scripts.Managers {
 			Face.color = profile.PictureElements.FaceColor;
 			Eyes.sprite = profile.PictureElements.EyeShapeSprite;
 			Eyes.color = profile.PictureElements.EyeColor;
+			Nose.sprite = profile.PictureElements.NoseShapeSprite;
+			Mouth.sprite = profile.PictureElements.MouthShapeSprite;
 		}
 	}
 }
