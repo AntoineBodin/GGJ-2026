@@ -116,10 +116,10 @@ TextureImporter:
       name: Hair_3_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 22
-        width: 59
-        height: 42
+        x: 10
+        y: 40
+        width: 42
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

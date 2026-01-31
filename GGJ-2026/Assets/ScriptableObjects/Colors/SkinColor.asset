@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 256ebf2be9d2c0e349daa1072ad6f1cb, type: 3}
+  m_Name: SkinColor
+  m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.ScriptableObjects.GameColors
+  _colors:
+  - _name: pink_bright
+    _color: {r: 0.990566, g: 0.8048888, b: 0.7989943, a: 1}
+  - _name: pink_mid
+    _color: {r: 0.9098039, g: 0.6509804, b: 0.5803922, a: 1}
+  - _name: pink_dark
+    _color: {r: 0.511, g: 0.31534973, b: 0.25754398, a: 1}
+  - _name: yellow_bright
+    _color: {r: 1, g: 0.90588236, b: 0.69803923, a: 1}
+  - _name: yellow_mid
+    _color: {r: 0.92941177, g: 0.7607843, b: 0.40392157, a: 1}
+  - _name: yellow_dark
+    _color: {r: 0.4339623, g: 0.3192377, b: 0.1535244, a: 1}
+  - _name: orange_bright
+    _color: {r: 1, g: 0.8156863, b: 0.64705884, a: 1}
+  - _name: orange_mid
+    _color: {r: 1, g: 0.6509804, b: 0.3254902, a: 1}
+  - _name: orange_dark
+    _color: {r: 0.597, g: 0.3664612, b: 0.14805602, a: 1}
