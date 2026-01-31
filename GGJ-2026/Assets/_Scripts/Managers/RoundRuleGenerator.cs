@@ -307,23 +307,50 @@ namespace Assets._Scripts.Managers {
 		}
 
 		private IInstruction BuildTree(List<IInstruction> instructions) {
-			// Simple tree: first instruction at root, rest as OR children
-			// For more complex trees, this can be expanded
 			if (instructions.Count == 1) {
 				return instructions[0];
 			}
 
-			// Create a simple 2-level tree for now
-			// Root AND (child1 OR child2 OR ...)
-			var root = instructions[0];
-			var children = instructions.Skip(1).ToList();
-
-			if (children.Count == 1) {
-				return new AndInstruction(new List<IInstruction> { root, children[0] });
+			if (instructions.Count == 2) {
+				// With 2 instructions, randomly choose AND or OR
+				if (Random.value > 0.5f) {
+					return new AndInstruction(instructions);
+				}
+				return new OrInstruction(instructions);
 			}
 
-			var orChildren = new OrInstruction(children);
-			return new AndInstruction(new List<IInstruction> { root, orChildren });
+			// Split instructions into groups, then: (group1) AND (group2) AND ...
+			// Where each group is: (A OR B OR ...)
+			// Result: must match at least one from each group
+			int groupCount = Mathf.Min(_config.MaxDepth, instructions.Count);
+			groupCount = Mathf.Max(2, groupCount); // At least 2 groups
+
+			var groups = new List<List<IInstruction>>();
+			for (int i = 0; i < groupCount; i++) {
+				groups.Add(new List<IInstruction>());
+			}
+
+			// Distribute instructions across groups
+			for (int i = 0; i < instructions.Count; i++) {
+				groups[i % groupCount].Add(instructions[i]);
+			}
+
+			// Build each group as OR, then combine with AND
+			var groupInstructions = new List<IInstruction>();
+			foreach (var group in groups) {
+				if (group.Count == 0) continue;
+				if (group.Count == 1) {
+					groupInstructions.Add(group[0]);
+				} else {
+					groupInstructions.Add(new OrInstruction(group));
+				}
+			}
+
+			if (groupInstructions.Count == 1) {
+				return groupInstructions[0];
+			}
+
+			return new AndInstruction(groupInstructions);
 		}
 	}
 
