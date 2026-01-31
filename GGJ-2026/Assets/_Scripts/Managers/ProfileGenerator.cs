@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
+
 using Assets._Scripts.Model;
 using Assets._Scripts.ScriptableObjects;
+
 using UnityEngine;
 
 namespace Assets._Scripts.Managers {
 	internal class ProfileGenerator : SingletonBehaviour<ProfileGenerator> {
-
 		public ProfileGenerationSettings ProfileGenerationSettings;
 		public ProfilePictureGenerationSettings ProfilePictureGenerationSettings;
 
@@ -16,8 +17,8 @@ namespace Assets._Scripts.Managers {
 			}
 		}
 
-
 		private Profile _lastGeneratedProfile; // TODO : make sure to not generate exactly the same profile twice in a row
+
 		public Profile GenerateProfile() {
 			Profile profile = new();
 
@@ -46,14 +47,21 @@ namespace Assets._Scripts.Managers {
 		}
 
 		private string GenerateName(Gender gender) {
-			bool firstNameGenderIsMale = gender == Gender.Male || (gender == Gender.Other && Random.value > 0.5f);
+			bool firstNameGenderIsMale =
+				gender == Gender.Male || (gender == Gender.Other && Random.value > 0.5f);
 			string firstName;
-			string lastName = ProfileGenerationSettings.LastNames[Random.Range(0, ProfileGenerationSettings.LastNames.Count)];
+			string lastName = ProfileGenerationSettings.LastNames[
+				Random.Range(0, ProfileGenerationSettings.LastNames.Count)
+			];
 
 			if (firstNameGenderIsMale) {
-				firstName = ProfileGenerationSettings.FirstNamesMale[Random.Range(0, ProfileGenerationSettings.FirstNamesMale.Count)];
+				firstName = ProfileGenerationSettings.FirstNamesMale[
+					Random.Range(0, ProfileGenerationSettings.FirstNamesMale.Count)
+				];
 			} else {
-				firstName = ProfileGenerationSettings.FirstNamesFemale[Random.Range(0, ProfileGenerationSettings.FirstNamesFemale.Count)];
+				firstName = ProfileGenerationSettings.FirstNamesFemale[
+					Random.Range(0, ProfileGenerationSettings.FirstNamesFemale.Count)
+				];
 			}
 			return $"{firstName} {lastName}";
 		}
@@ -63,10 +71,13 @@ namespace Assets._Scripts.Managers {
 		}
 
 		private List<string> GenerateInterests() {
-			int maxInterestCount = Mathf.Min(ProfileGenerationSettings.MaxInterests, ProfileGenerationSettings.Interests.Count);
+			int maxInterestCount = Mathf.Min(
+				ProfileGenerationSettings.MaxInterests,
+				ProfileGenerationSettings.Interests.Count
+			);
 
-			return ProfileGenerationSettings.Interests
-				.OrderBy(x => Random.value)
+			return ProfileGenerationSettings
+				.Interests.OrderBy(x => Random.value)
 				.Take(Random.Range(ProfileGenerationSettings.MinInterests, maxInterestCount + 1))
 				.ToList();
 		}
@@ -74,26 +85,45 @@ namespace Assets._Scripts.Managers {
 		private int GenerateAge() {
 			float ageT = Random.value;
 			float ageValue = ProfileGenerationSettings.AgeRandomFunction.Evaluate(ageT);
-			return Mathf.RoundToInt(Mathf.Lerp(ProfileGenerationSettings.MinAge, ProfileGenerationSettings.MaxAge, ageValue));
+			return Mathf.RoundToInt(
+				Mathf.Lerp(ProfileGenerationSettings.MinAge, ProfileGenerationSettings.MaxAge, ageValue)
+			);
 		}
 
 		public ProfilePictureElements GeneratePictureElements() {
 			return new() {
-				FaceSprite = ProfilePictureGenerationSettings.Faces[Random.Range(0, ProfilePictureGenerationSettings.Faces.Count)],
-				FaceColor = ProfilePictureGenerationSettings.FaceColors[Random.Range(0, ProfilePictureGenerationSettings.FaceColors.Count)],
-				BackgroundColor = ProfilePictureGenerationSettings.BackgroundColors[Random.Range(0, ProfilePictureGenerationSettings.BackgroundColors.Count)],
-				EyeShapeSprite = ProfilePictureGenerationSettings.EyeShapes[Random.Range(0, ProfilePictureGenerationSettings.EyeShapes.Count)],
-				EyeColor = ProfilePictureGenerationSettings.EyeColors[Random.Range(0, ProfilePictureGenerationSettings.EyeColors.Count)],
-				HairstyleSprite = ProfilePictureGenerationSettings.Hairstyles[Random.Range(0, ProfilePictureGenerationSettings.Hairstyles.Count)],
-				HairColor = ProfilePictureGenerationSettings.HairColors[Random.Range(0, ProfilePictureGenerationSettings.HairColors.Count)]
+				FaceSprite = ProfilePictureGenerationSettings.Faces[
+					Random.Range(0, ProfilePictureGenerationSettings.Faces.Count)
+				],
+				FaceColor = ProfilePictureGenerationSettings.FaceColors.Colors[
+					Random.Range(0, ProfilePictureGenerationSettings.FaceColors.Colors.Count)
+				].Color,
+				BackgroundColor = ProfilePictureGenerationSettings.BackgroundColors.Colors[
+					Random.Range(0, ProfilePictureGenerationSettings.BackgroundColors.Colors.Count)
+				].Color,
+				EyeShapeSprite = ProfilePictureGenerationSettings.EyeShapes[
+					Random.Range(0, ProfilePictureGenerationSettings.EyeShapes.Count)
+				],
+				EyeColor = ProfilePictureGenerationSettings.EyeColors.Colors[
+					Random.Range(0, ProfilePictureGenerationSettings.EyeColors.Colors.Count)
+				].Color,
+				HairstyleSprite = ProfilePictureGenerationSettings.Hairstyles[
+					Random.Range(0, ProfilePictureGenerationSettings.Hairstyles.Count)
+				],
+				HairColor = ProfilePictureGenerationSettings.HairColors.Colors[
+					Random.Range(0, ProfilePictureGenerationSettings.HairColors.Colors.Count)
+				].Color,
 			};
 		}
 
 		private float GenerateHeight() {
 			float t = Random.value;
 			float heightValue = ProfileGenerationSettings.HeightRandomFunction.Evaluate(t);
-			return Mathf.Lerp(ProfileGenerationSettings.MinHeight, ProfileGenerationSettings.MaxHeight, heightValue);
+			return Mathf.Lerp(
+				ProfileGenerationSettings.MinHeight,
+				ProfileGenerationSettings.MaxHeight,
+				heightValue
+			);
 		}
-
 	}
 }

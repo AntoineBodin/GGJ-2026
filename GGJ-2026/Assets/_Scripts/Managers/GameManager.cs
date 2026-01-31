@@ -1,9 +1,7 @@
 ﻿using System;
 
-namespace Assets._Scripts.Managers
-{
-	internal class GameManager : SingletonBehaviour<GameManager>
-	{
+namespace Assets._Scripts.Managers {
+	internal class GameManager : SingletonBehaviour<GameManager> {
 		private GameState _gameState;
 
 		public static Action<GameState> OnGameStateChanged { get; set; }
@@ -14,23 +12,19 @@ namespace Assets._Scripts.Managers
 
 		private int prestigeLevel = 0;
 
-		private void Start()
-		{
+		private void Start() {
 			TutorialManager.Instance.OnTutorialEnded += StartGame;
 		}
 
-		private void StartGame()
-		{
+		private void StartGame() {
 			UpdateGameState(GameState.Playing);
 			OnStartGame?.Invoke();
 		}
 
-		public void UpdateGameState(GameState newGameState)
-		{
+		public void UpdateGameState(GameState newGameState) {
 			_gameState = newGameState;
 
-			switch (newGameState)
-			{
+			switch (newGameState) {
 				case GameState.Playing:
 					break;
 				case GameState.Upgrade:
@@ -46,8 +40,7 @@ namespace Assets._Scripts.Managers
 			OnGameStateChanged?.Invoke(newGameState);
 		}
 
-		internal void RestartGame()
-		{
+		internal void RestartGame() {
 			prestigeLevel++;
 			OnResetGame?.Invoke(prestigeLevel);
 		}
