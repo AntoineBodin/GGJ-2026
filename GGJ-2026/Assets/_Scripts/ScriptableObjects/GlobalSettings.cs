@@ -47,4 +47,9 @@ public class GlobalSettings : ScriptableObject
 	[SerializeField]
 	private bool _resetLivesAfterDay = true;
 	public bool ResetLivesAfterDay => _resetLivesAfterDay;
+
+	[Range(0.0f, 1.0f)]
+	[SerializeField]
+	private float _buttonClickVolume;
+	public float ButtonClickVolume => _buttonClickVolume;
 }

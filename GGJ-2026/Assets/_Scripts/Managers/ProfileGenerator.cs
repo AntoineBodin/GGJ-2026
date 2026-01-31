@@ -43,7 +43,6 @@ namespace Assets._Scripts.Managers {
 
 			profile.Gender = GenerateGender();
 			profile.Name = GenerateName(profile.Gender);
-			profile.Bio = GenerateBio();
 			profile.Interests = GenerateInterests();
 			profile.Age = GenerateAge();
 			profile.PictureElements = GeneratePictureElements();
@@ -283,10 +282,6 @@ namespace Assets._Scripts.Managers {
 				];
 			}
 			return $"{firstName} {lastName}";
-		}
-
-		private string GenerateBio() {
-			return ProfileGenerationSettings.Bios[Random.Range(0, ProfileGenerationSettings.Bios.Count)];
 		}
 
 		private List<string> GenerateInterests() {
