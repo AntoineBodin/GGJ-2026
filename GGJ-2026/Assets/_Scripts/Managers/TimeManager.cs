@@ -20,7 +20,6 @@ namespace Assets._Scripts.Managers {
 		}
 
 		private void Update() {
-			if (gameManager.CurrentGameState != GameState.Playing) return;
 
 			DaySecondsPassed += Time.deltaTime;
 			if (DaySecondsPassed >= gameManager.GlobalSettings.DayDurationSecond) {
@@ -29,7 +28,7 @@ namespace Assets._Scripts.Managers {
 			}
 
 			float percentage = DaySecondsPassed / gameManager.GlobalSettings.DayDurationSecond;
-			float angle = Mathf.Lerp(0f, -93f, percentage);
+			float angle = Mathf.Lerp(16f, -62f, percentage);
 			RectTransform rect = (RectTransform)Sun.transform;
 			rect.localRotation = Quaternion.Euler(0f, 0f, angle);
 		}
