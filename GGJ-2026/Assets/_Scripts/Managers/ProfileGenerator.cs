@@ -310,7 +310,7 @@ namespace Assets._Scripts.Managers {
 		}
 
 		public ProfilePictureElements GeneratePictureElements() {
-			return new() {
+			ProfilePictureElements result = new() {
 				FaceSprite = ProfilePictureGenerationSettings.Faces[
 					Random.Range(0, ProfilePictureGenerationSettings.Faces.Count)
 				],
@@ -332,7 +332,23 @@ namespace Assets._Scripts.Managers {
 				HairColor = ProfilePictureGenerationSettings.HairColors.Colors[
 					Random.Range(0, ProfilePictureGenerationSettings.HairColors.Colors.Count)
 				].Color,
+				MouthShapeSprite = ProfilePictureGenerationSettings.MouthShapes[
+					Random.Range(0, ProfilePictureGenerationSettings.MouthShapes.Count)
+				],
+				NoseShapeSprite = ProfilePictureGenerationSettings.NoseShapes[
+					Random.Range(0, ProfilePictureGenerationSettings.NoseShapes.Count)
+					]
 			};
+
+			var t = Random.value;
+			if (t < 0.33f) {
+				result.AccessorySprite = ProfilePictureGenerationSettings.Accessories[
+					Random.Range(0, ProfilePictureGenerationSettings.Accessories.Count)
+				];
+			}else {
+				result.AccessorySprite = null;
+			}
+				return result;
 		}
 
 		private float GenerateHeight() {

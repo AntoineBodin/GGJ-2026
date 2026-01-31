@@ -33,5 +33,18 @@ namespace Assets._Scripts.ScriptableObjects {
 		[SerializeField]
 		private GameColors _hairColors;
 		public GameColors HairColors => _hairColors;
+
+		[SerializeField]
+		private List<Sprite> _mouthShapes;
+		public List<Sprite> MouthShapes => _mouthShapes;
+
+		[SerializeField]
+		private List<Sprite> _noseShapes;
+		public List<Sprite> NoseShapes => _noseShapes;
+
+		[SerializeField]
+		private List<Sprite> _accessories;
+		public List<Sprite> Accessories => _accessories;
+
 	}
 }
