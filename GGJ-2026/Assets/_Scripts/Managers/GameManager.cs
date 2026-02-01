@@ -64,7 +64,8 @@ namespace Assets._Scripts.Managers {
 			OnNewRound?.Invoke(_currentRule);
 			Debug.Log($"New round started with {_currentRule.Instructions.Count} detection rules:");
 			foreach (var instruction in _currentRule.Instructions) {
-				Debug.Log($"  - {instruction.Description}");
+				//Debug.Log($"  - {instruction.Description}");
+				Debug.Log($"  - {instruction.HumanReadableDescription}");
 			}
 
 			if (GlobalSettings.ResetLivesAfterDay)

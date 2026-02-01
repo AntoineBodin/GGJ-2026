@@ -913,7 +913,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0304b2e6532b5214ba75b2e6946ade2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.GameManager
-  config: {fileID: 11400000, guid: 3e509e50b8c304fd3b8f58788c1bf701, type: 2}
+  <GlobalSettings>k__BackingField: {fileID: 11400000, guid: 52af894a4ee5ea3848cd3ca33bdf0b7b, type: 2}
+  <Config>k__BackingField: {fileID: 11400000, guid: 3e2ec8a7dce6995438b90ec58c22a109, type: 2}
 --- !u!4 &1408556777
 Transform:
   m_ObjectHideFlags: 0

@@ -76,7 +76,8 @@ namespace Assets._Scripts.Testing {
 			Debug.Log("--- Detection Rules ---");
 
 			foreach (var instruction in _currentRule.Instructions) {
-				Debug.Log($"  - {instruction.Description}");
+				//Debug.Log($"  - {instruction.Description}");
+				Debug.Log($"  - {instruction.HumanReadableDescription}");
 				Debug.Log($"    Attribute: {instruction.AttributeType}");
 				if (instruction.NumericConfig != null) {
 					Debug.Log($"    Human range: {instruction.NumericConfig.HumanMin} - {instruction.NumericConfig.HumanMax}");
@@ -97,7 +98,8 @@ namespace Assets._Scripts.Testing {
 			Debug.Log("\n========== TESTING PROFILE GENERATION ==========");
 			Debug.Log("Current rules:");
 			foreach (var instr in _currentRule.Instructions) {
-				Debug.Log($"  - {instr.Description}");
+				Debug.Log($"  - {instr.HumanReadableDescription}");
+				//Debug.Log($"  - {instr.Description}");
 			}
 
 			Debug.Log("\n--- Generating Aliens ---");
@@ -146,7 +148,8 @@ namespace Assets._Scripts.Testing {
 
 			Debug.Log("Rules:");
 			foreach (var instr in _currentRule.Instructions) {
-				Debug.Log($"  - {instr.Description}");
+				Debug.Log($"  - {instr.HumanReadableDescription}");
+				//Debug.Log($"  - {instr.Description}");
 			}
 
 			int alienCorrect = 0;
