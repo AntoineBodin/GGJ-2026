@@ -448,8 +448,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Morning Agent!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8ae95fc9fe381942a41675bb62db931, type: 2}
-  m_sharedMaterial: {fileID: -3043958749985822963, guid: f8ae95fc9fe381942a41675bb62db931, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f08005f858e945deb4890b37e360185, type: 2}
+  m_sharedMaterial: {fileID: -3043958749985822963, guid: 9f08005f858e945deb4890b37e360185, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1061,6 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.TimeManager
   <Sun>k__BackingField: {fileID: 561954115}
+  <Text>k__BackingField: {fileID: 0}
 --- !u!114 &495864709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,6 +1095,7 @@ MonoBehaviour:
   <Nose>k__BackingField: {fileID: 959305437}
   <Mouth>k__BackingField: {fileID: 461673210}
   <Accessory>k__BackingField: {fileID: 1527123083}
+  <Text>k__BackingField: {fileID: 0}
 --- !u!114 &495864711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,9 +1401,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.00008803606
+    y: 0
     width: 1
-    height: 0.9998239
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1662,8 +1664,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Start Day
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8ae95fc9fe381942a41675bb62db931, type: 2}
-  m_sharedMaterial: {fileID: -3043958749985822963, guid: f8ae95fc9fe381942a41675bb62db931, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f08005f858e945deb4890b37e360185, type: 2}
+  m_sharedMaterial: {fileID: -3043958749985822963, guid: 9f08005f858e945deb4890b37e360185, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3345,8 +3347,8 @@ MonoBehaviour:
   m_text: "The Survaillance Team has send us the following identifiers for those
     scum aliens. \n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b30cebd1ddeda6ba7934438d23c3d8bd, type: 2}
-  m_sharedMaterial: {fileID: -3842209463762679719, guid: b30cebd1ddeda6ba7934438d23c3d8bd, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f08005f858e945deb4890b37e360185, type: 2}
+  m_sharedMaterial: {fileID: -3043958749985822963, guid: 9f08005f858e945deb4890b37e360185, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3878,8 +3880,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "- Red Eyes\n- Brown Hair \n- Square Face"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8ae95fc9fe381942a41675bb62db931, type: 2}
-  m_sharedMaterial: {fileID: -3043958749985822963, guid: f8ae95fc9fe381942a41675bb62db931, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9f08005f858e945deb4890b37e360185, type: 2}
+  m_sharedMaterial: {fileID: -3043958749985822963, guid: 9f08005f858e945deb4890b37e360185, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
