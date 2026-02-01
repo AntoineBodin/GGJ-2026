@@ -55,6 +55,8 @@ namespace Assets._Scripts.Managers {
 
 		public void StartRound() {
 			IInstruction instruction = InstructionsGenerator.Instance.GenerateInstructions(dayIndex);
+			string descr = instruction.Describe();
+			Debug.Log(descr);
 			GenerateProfileList(instruction);
 			roundProfiles.OrderBy(profile => Guid.NewGuid());
 			Index = 0;
@@ -113,7 +115,7 @@ namespace Assets._Scripts.Managers {
 			Index++;
 			if (Index < roundProfiles.Count && !timeIsUp) {
 				// currentProfile = roundProfiles[Index];
-				OnNewProfileLoaded?.Invoke(currentProfile, hasWon, hasDeported, MoveDirection.Right);
+				OnNewProfileLoaded?.Invoke(currentProfile, hasWon, hasDeported, hasDeported? MoveDirection.Left : MoveDirection.Right);
 			} else {
 				// End of round
 			}
