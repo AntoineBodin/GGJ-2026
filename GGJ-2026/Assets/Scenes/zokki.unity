@@ -1448,6 +1448,7 @@ GameObject:
   - component: {fileID: 495864717}
   - component: {fileID: 495864716}
   - component: {fileID: 495864718}
+  - component: {fileID: 495864719}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1717,6 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.GameManager
   <GlobalSettings>k__BackingField: {fileID: 11400000, guid: 52af894a4ee5ea3848cd3ca33bdf0b7b, type: 2}
   <Config>k__BackingField: {fileID: 11400000, guid: 3e509e50b8c304fd3b8f58788c1bf701, type: 2}
+  <GameOverScreen>k__BackingField: {fileID: 853491313}
 --- !u!4 &495864713
 Transform:
   m_ObjectHideFlags: 0
@@ -1824,6 +1826,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.InstructionsGenerator
   profilePictureSettings: {fileID: 11400000, guid: 88cadb1d20b4dd047a7cbe47e4f3177a, type: 2}
   profileSettings: {fileID: 11400000, guid: 9186b28c52922d744a63304b0635025c, type: 2}
+--- !u!114 &495864719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495864704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 825f22335f4456ab6817dabe59d08610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.RestartManager
 --- !u!1 &516801134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,9 +2013,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
+    y: 0.125
     width: 1
-    height: 1
+    height: 0.75
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
