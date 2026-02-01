@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +29,11 @@ namespace Assets._Scripts.Managers {
 			for (int i = 0; i < 10; i++) {
 				roundProfiles.Add(ProfileGenerator.Instance.GenerateProfile());
 			}
+			StartCoroutine(StartRoundAfter3Seconds());
+		}
+
+		private IEnumerator StartRoundAfter3Seconds() {
+			yield return new WaitForSeconds(3);
 			StartRound();
 		}
 

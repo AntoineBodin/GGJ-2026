@@ -21,16 +21,6 @@ namespace Assets._Scripts.Managers {
 		[field: SerializeField]
 		protected Image Accessory { get; private set; }
 
-		[SerializeField]
-		private Button generateNewButton;
-
-		protected override void Awake() {
-			generateNewButton?.onClick.AddListener(() => {
-
-				var profile = ProfileGenerator.Instance.GenerateProfile();
-				DisplayProfile(profile);
-			});
-		}
 
 		public void DisplayProfile(Profile profile) {
 			Background.color = profile.PictureElements.BackgroundColor;
