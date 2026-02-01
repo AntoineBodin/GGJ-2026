@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a893c102262e892aaa19faa8dfa1f15f, type: 3}
   m_Name: Medium
   m_EditorClassIdentifier: Assembly-CSharp::Test
-  _profilesPerDay: 0
-  _alienPercentagePerDayMin: 0
-  _alienPercentagePerDayMax: 0
+  _profilesPerDay: 12
+  _alienPercentagePerDayMin: 0.1
+  _alienPercentagePerDayMax: 0.3
   _attributesCountMin: 0
   _attributesCountMax: 0
   _daysCount: 0

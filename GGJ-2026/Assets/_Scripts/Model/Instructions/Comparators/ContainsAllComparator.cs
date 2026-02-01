@@ -16,5 +16,9 @@ namespace Assets._Scripts.Model.Instructions.Comparators {
 
 			return true;
 		}
+
+		public string Describe() {
+			throw new System.NotImplementedException();
+		}
 	}
 }

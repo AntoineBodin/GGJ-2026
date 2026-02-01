@@ -44,6 +44,9 @@ namespace Assets._Scripts.Managers {
 			TutorialManager.Instance.OnTutorialEnded += StartGame;
 			_ruleGenerator = new RoundRuleGenerator(Config);
 			StartNewRound();
+
+			// @TODO: fixme
+			StartGame();
 		}
 
 		private void StartGame() {

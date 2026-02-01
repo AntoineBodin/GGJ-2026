@@ -111,7 +111,7 @@ namespace Assets._Scripts.Managers {
 			if (attr.NumericConfig != null) {
 				return GenerateNumericInstruction(attr.NumericConfig);
 			} else if (attr.ColorConfig != null) {
-				return GenerateColorInstruction(attr.ColorConfig);
+				return null; // GenerateColorInstruction(attr.ColorConfig);
 			}
 			return null;
 		}
@@ -259,9 +259,9 @@ namespace Assets._Scripts.Managers {
 			}
 		}
 
-		private GeneratedInstruction GenerateColorInstruction(ColorAttributeConfig config) {
+		/*private GeneratedInstruction GenerateColorInstruction(ColorAttributeConfig config) {
 			// Pick a random alien color
-			Color alienColor = config.AlienColors[Random.Range(0, config.AlienColors.Count)];
+			NamedColor alienColor = config.AlienColors[Random.Range(0, config.AlienColors.Count)];
 
 			IInstruction instruction = CreateColorInstruction(config.AttributeType, alienColor);
 			string description = $"{config.AttributeType} == {alienColor}";
@@ -273,9 +273,9 @@ namespace Assets._Scripts.Managers {
 				ColorValue = alienColor,
 				ColorConfig = config
 			};
-		}
+		}*/
 
-		private IInstruction CreateColorInstruction(AttributeType type, Color color) {
+		private IInstruction CreateColorInstruction(AttributeType type, NamedColor color) {
 			var comparator = new ColorEqualsComparator();
 			switch (type) {
 				case AttributeType.EyeColor:

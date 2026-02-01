@@ -1232,6 +1232,7 @@ GameObject:
   - component: {fileID: 495864715}
   - component: {fileID: 495864717}
   - component: {fileID: 495864716}
+  - component: {fileID: 495864718}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1593,6 +1594,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ebb77102c74aa749b1c67715879f146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.RoundManager
+  globalSettings: {fileID: 0}
+--- !u!114 &495864718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495864704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29a3fd61824e9449b13cb2ddfdb7552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Assets._Scripts.Managers.InstructionsGenerator
+  profilePictureSettings: {fileID: 11400000, guid: 88cadb1d20b4dd047a7cbe47e4f3177a, type: 2}
+  profileSettings: {fileID: 11400000, guid: 9186b28c52922d744a63304b0635025c, type: 2}
 --- !u!1 &516801134
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,9 +1784,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.13186383
+    y: 0
     width: 1
-    height: 0.73627234
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2132,7 +2148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -40, y: -149.99998}
+  m_AnchoredPosition: {x: -40, y: -150}
   m_SizeDelta: {x: 480, y: 480}
   m_Pivot: {x: 1.2, y: -0.2}
 --- !u!114 &561954117
