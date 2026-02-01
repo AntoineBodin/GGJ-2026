@@ -14,11 +14,18 @@ namespace Assets._Scripts.Managers {
 	internal class RoundManager : SingletonBehaviour<RoundManager> {
 
 		private List<Profile> roundProfiles;
-		private int index = 0;
+		private int _index;
+		public int Index {
+			get => _index; private set {
+				_index = value;
+				OnIndexChange?.Invoke(_index);
+			}
+		}
 		private Profile currentProfile;
 		private bool timeIsUp = false;
 
 		public event Action<Profile, bool, bool, MoveDirection> OnNewProfileLoaded;
+		public static event Action<int> OnIndexChange;
 
 		private void Start() {
 			UIManager.Instance.OnLikeButtonClicked += HandleLikeButtonClicked;
@@ -44,8 +51,8 @@ namespace Assets._Scripts.Managers {
 		}
 
 		public void StartRound() {
-			index = 0;
-			currentProfile = roundProfiles[index];
+			Index = 0;
+			currentProfile = roundProfiles[Index];
 			OnNewProfileLoaded?.Invoke(currentProfile, false, false, MoveDirection.None);
 		}
 
@@ -69,9 +76,9 @@ namespace Assets._Scripts.Managers {
 		}
 
 		private void TryGetNextProfile(bool hasWon, bool hasDeported) {
-			index++;
-			if (index < roundProfiles.Count && !timeIsUp) {
-				currentProfile = roundProfiles[index];
+			Index++;
+			if (Index < roundProfiles.Count && !timeIsUp) {
+				currentProfile = roundProfiles[Index];
 				OnNewProfileLoaded?.Invoke(currentProfile, hasWon, hasDeported, MoveDirection.Right);
 			} else {
 				// End of round

@@ -50,6 +50,9 @@ namespace Assets._Scripts.Managers {
 
 <b>Interests:</b>
 - {string.Join("\n- ", profile.Interests)}";
+			LayoutRebuilder.ForceRebuildLayoutImmediate(
+					Text.rectTransform
+			);
 		}
 	}
 }

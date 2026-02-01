@@ -22,7 +22,7 @@ namespace Assets._Scripts.Managers {
 
 	internal class TabletManager : SingletonBehaviour<TabletManager> {
 		[field: SerializeField]
-		public TextMeshProUGUI RoundText { get; private set; }
+		public TextMeshProUGUI ProfileIndexText { get; private set; }
 
 		[field: SerializeField]
 		public Image Frame { get; private set; }
@@ -39,7 +39,7 @@ namespace Assets._Scripts.Managers {
 			// StartCoroutine(IntervalRoutine());
 
 			GameManager.OnLiveChange += changeDamage;
-			GameManager.OnDayChange += changeDay;
+			RoundManager.OnIndexChange += changeProfile;
 		}
 
 		// IEnumerator IntervalRoutine() {
@@ -74,8 +74,8 @@ namespace Assets._Scripts.Managers {
 			}
 		}
 
-		private void changeDay(uint day) {
-			RoundText.text = day + "/" + GameManager.Instance.GlobalSettings.DaysCount;
+		private void changeProfile(int profileNumber) {
+			ProfileIndexText.text = (1 + profileNumber) + "/" + GameManager.Instance.GlobalSettings.ProfilesPerDay;
 		}
 	}
 }
