@@ -19,15 +19,22 @@ namespace Assets._Scripts.Managers {
 			}
 		}
 
+		private uint _currentDay;
+		public uint CurrentDay {
+			get => _currentDay; private set {
+				_currentDay = value;
+				OnDayChange?.Invoke(_currentDay);
+			}
+		}
+
 		public GameState CurrentGameState { get; private set; }
 		public static Action<GameState> OnGameStateChanged { get; set; }
 		public static event Action<int> OnResetGame;
 		public static event Action OnStartGame;
-		public static event Action OnStartDay;
+		public static event Action<uint> OnDayChange;
 		public static event Action<GeneratedRule> OnNewRound;
 		public static event Action<uint> OnLiveChange;
 
-		private int prestigeLevel = 0;
 		private RoundRuleGenerator _ruleGenerator;
 		private GeneratedRule _currentRule;
 
@@ -61,7 +68,7 @@ namespace Assets._Scripts.Managers {
 		}
 
 		public void StartNewRound() {
-			OnStartDay?.Invoke();
+			CurrentDay++;
 			// Generate new tree
 			// Generate Alien profiles
 			// Generate Humans profiles

@@ -1,6 +1,8 @@
 using Assets._Scripts.Model;
 using Assets._Scripts.ScriptableObjects;
 
+using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +22,8 @@ namespace Assets._Scripts.Managers {
 		protected Image Mouth { get; private set; }
 		[field: SerializeField]
 		protected Image Accessory { get; private set; }
+		[field: SerializeField]
+		public TextMeshProUGUI Text { get; private set; }
 
 
 		public void DisplayProfile(Profile profile) {
@@ -38,6 +42,14 @@ namespace Assets._Scripts.Managers {
 			} else {
 				Accessory.enabled = false;
 			}
+
+			Text.text = $@"<b>Name:</b> {profile.Name}
+<b>Age:</b>  {profile.Age}Y
+<b>Gender:</b>  {profile.Gender.ToString()}
+<b>Height:</b>  {profile.Height.ToString("F2")}m
+
+<b>Interests:</b>
+- {string.Join("\n- ", profile.Interests)}";
 		}
 	}
 }

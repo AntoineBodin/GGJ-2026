@@ -25,6 +25,10 @@ namespace Assets._Scripts.Managers {
 
 		private void Start() {
 			GameManager.OnNewRound += OnNewRound;
+
+			if (Application.isEditor) {
+				ProfileManager.Instance.DisplayProfile(GenerateProfile());
+			}
 		}
 
 		private void OnDestroy() {
@@ -340,10 +344,10 @@ namespace Assets._Scripts.Managers {
 				result.AccessorySprite = ProfilePictureGenerationSettings.Accessories[
 					Random.Range(0, ProfilePictureGenerationSettings.Accessories.Count)
 				];
-			}else {
+			} else {
 				result.AccessorySprite = null;
 			}
-				return result;
+			return result;
 		}
 
 		private float GenerateHeight() {
