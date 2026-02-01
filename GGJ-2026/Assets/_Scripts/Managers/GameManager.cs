@@ -11,7 +11,13 @@ namespace Assets._Scripts.Managers {
 		[field: SerializeField]
 		public RoundGenerationConfig Config { get; private set; }
 
-		public uint RemainingLives { get; private set; }
+		private uint _remainingLives;
+		public uint RemainingLives {
+			get => _remainingLives; private set {
+				_remainingLives = value;
+				OnLiveChange?.Invoke(_remainingLives);
+			}
+		}
 
 		public GameState CurrentGameState { get; private set; }
 		public static Action<GameState> OnGameStateChanged { get; set; }
@@ -19,6 +25,7 @@ namespace Assets._Scripts.Managers {
 		public static event Action OnStartGame;
 		public static event Action OnStartDay;
 		public static event Action<GeneratedRule> OnNewRound;
+		public static event Action<uint> OnLiveChange;
 
 		private int prestigeLevel = 0;
 		private RoundRuleGenerator _ruleGenerator;
@@ -73,8 +80,7 @@ namespace Assets._Scripts.Managers {
 
 		public void OnError() {
 			RemainingLives--;
-			// update break screen
-			if (RemainingLives == 0) {
+			if (RemainingLives <= 0) {
 				UpdateGameState(GameState.None);
 				Debug.Log("Game Over");
 				// TODO : Show Game Over Screen

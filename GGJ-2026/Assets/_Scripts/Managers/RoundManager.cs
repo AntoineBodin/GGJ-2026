@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,14 @@ namespace Assets._Scripts.Managers {
 		private List<Profile> roundProfiles;
 		private int index = 0;
 		private Profile currentProfile;
+		private bool timeIsUp = false;
 
 		public event Action<Profile, bool, bool, MoveDirection> OnNewProfileLoaded;
 
 		private void Start() {
 			UIManager.Instance.OnLikeButtonClicked += HandleLikeButtonClicked;
 			UIManager.Instance.OnDeportButtonClicked += HandleDeportButtonClicked;
+			TimeManager.OnTimePassed += () => timeIsUp = true;
 
 			var firstAlienProfile = ProfileGenerator.Instance.GenerateProfile();
 			firstAlienProfile.IsAlien = true;
@@ -28,6 +31,11 @@ namespace Assets._Scripts.Managers {
 			for (int i = 0; i < 10; i++) {
 				roundProfiles.Add(ProfileGenerator.Instance.GenerateProfile());
 			}
+			StartCoroutine(StartRoundAfter3Seconds());
+		}
+
+		private IEnumerator StartRoundAfter3Seconds() {
+			yield return new WaitForSeconds(3);
 			StartRound();
 		}
 
@@ -62,7 +70,7 @@ namespace Assets._Scripts.Managers {
 
 		private void TryGetNextProfile(bool hasWon, bool hasDeported) {
 			index++;
-			if (index < roundProfiles.Count) {
+			if (index < roundProfiles.Count && !timeIsUp) {
 				currentProfile = roundProfiles[index];
 				OnNewProfileLoaded?.Invoke(currentProfile, hasWon, hasDeported, MoveDirection.Right);
 			} else {

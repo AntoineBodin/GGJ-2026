@@ -6,7 +6,6 @@ namespace Assets._Scripts.Managers {
 	internal class RocketManager : SingletonBehaviour<RocketManager> {
 
 		private void Start() {
-			LaunchAnimation(true);
 		}
 
 		[SerializeField]

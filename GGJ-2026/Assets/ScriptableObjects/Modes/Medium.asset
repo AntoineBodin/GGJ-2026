@@ -19,7 +19,7 @@ MonoBehaviour:
   _attributesCountMax: 0
   _daysCount: 0
   _dayDurationSecond: 120
-  _livesCount: 0
+  _livesCount: 3
   _crackSprites: []
   _resetLivesAfterDay: 1
   _buttonClickVolume: 1
