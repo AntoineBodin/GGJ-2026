@@ -73,11 +73,13 @@ namespace Assets._Scripts.Managers {
 
 		public void OnError() {
 			RemainingLives--;
+			// update break screen
 			if (RemainingLives == 0) {
 				UpdateGameState(GameState.None);
 				Debug.Log("Game Over");
 				// TODO : Show Game Over Screen
 			}
 		}
+
 	}
 }

@@ -9,5 +9,7 @@ namespace Assets._Scripts.Model {
 		public Gender Gender;
 		public float Height; //in cm
 		public List<string> Interests;
+		public bool IsAlien;
+
 	}
 }

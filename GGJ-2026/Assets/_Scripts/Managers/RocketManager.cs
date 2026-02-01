@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets._Scripts.Managers {
-	internal class RocketManager : MonoBehaviour {
+	internal class RocketManager : SingletonBehaviour<RocketManager> {
 
 		private void Start() {
 			LaunchAnimation(true);
