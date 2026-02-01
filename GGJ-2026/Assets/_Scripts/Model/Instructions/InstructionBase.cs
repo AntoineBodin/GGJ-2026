@@ -11,7 +11,7 @@ namespace Assets._Scripts.Model.Instructions {
 		}
 
 		public abstract T GetValue(Profile profile);
-
+		public abstract string Describe();
 		public bool Compare(T value) {
 			return Comparator.Compare(value, ExpectedValue);
 		}
@@ -19,5 +19,7 @@ namespace Assets._Scripts.Model.Instructions {
 		public bool IsValid(Profile profile) {
 			return Compare(GetValue(profile));
 		}
+
+		public abstract void ApplyAlienFeature(Profile profile);
 	}
 }

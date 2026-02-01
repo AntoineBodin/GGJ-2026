@@ -1,5 +1,4 @@
 using Assets._Scripts.Model;
-using Assets._Scripts.ScriptableObjects;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,13 +22,13 @@ namespace Assets._Scripts.Managers {
 
 
 		public void DisplayProfile(Profile profile) {
-			Background.color = profile.PictureElements.BackgroundColor;
+			Background.color = profile.PictureElements.BackgroundColor.Color;
 			Hair.sprite = profile.PictureElements.HairstyleSprite;
-			Hair.color = profile.PictureElements.HairColor;
+			Hair.color = profile.PictureElements.HairColor.Color;
 			Face.sprite = profile.PictureElements.FaceSprite;
-			Face.color = profile.PictureElements.FaceColor;
+			Face.color = profile.PictureElements.FaceColor.Color;
 			Eyes.sprite = profile.PictureElements.EyeShapeSprite;
-			Eyes.color = profile.PictureElements.EyeColor;
+			Eyes.color = profile.PictureElements.EyeColor.Color;
 			Nose.sprite = profile.PictureElements.NoseShapeSprite;
 			Mouth.sprite = profile.PictureElements.MouthShapeSprite;
 			if (profile.PictureElements.AccessorySprite != null) {

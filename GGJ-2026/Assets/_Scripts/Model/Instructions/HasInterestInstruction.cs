@@ -14,5 +14,13 @@ namespace Assets._Scripts.Model.Instructions {
 			bool hasInterest = profile.Interests.Contains(Interest);
 			return hasInterest == ShouldHave;
 		}
+
+		public string Describe() {
+			throw new System.NotImplementedException();
+		}
+
+		public void ApplyAlienFeature(Profile profile) {
+			throw new System.NotImplementedException();
+		}
 	}
 }

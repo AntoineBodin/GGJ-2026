@@ -9,5 +9,9 @@ namespace Assets._Scripts.Model.Instructions {
 		}
 
 		public abstract bool IsValid(Profile profile);
+		public abstract string Describe();
+
+		public abstract void ApplyAlienFeature(Profile profile);
+		
 	}
 }

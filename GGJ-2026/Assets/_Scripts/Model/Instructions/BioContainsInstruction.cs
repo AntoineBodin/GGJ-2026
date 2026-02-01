@@ -12,5 +12,13 @@ namespace Assets._Scripts.Model.Instructions {
 			bool contains = profile.Bio.Contains(Text);
 			return contains == ShouldContain;
 		}
+
+		public string Describe() {
+			throw new System.NotImplementedException();
+		}
+
+		public void ApplyAlienFeature(Profile profile) {
+			throw new System.NotImplementedException();
+		}
 	}
 }

@@ -55,27 +55,24 @@ namespace Assets._Scripts.Managers {
 		/// <summary>
 		/// Generates an alien profile that matches the current detection rules
 		/// </summary>
-		public Profile GenerateAlienProfile() {
-			if (_currentRule == null) {
-				Debug.LogWarning("No current rule set, generating random profile");
-				return GenerateProfile();
-			}
-
+		public Profile GenerateAlienProfile(IInstruction instruction) {
 			Profile profile = GenerateProfile();
 
 			// Override values to match alien detection rules
-			foreach (var instruction in _currentRule.Instructions) {
-				ApplyAlienValue(profile, instruction);
-			}
-
+			instruction.ApplyAlienFeature(profile);
+			profile.IsAlien = true;
 			Debug.Log($"Generated ALIEN: Age={profile.Age}, Height={profile.Height:F2}, Interests={profile.Interests.Count}");
 			return profile;
 		}
+/*
+		public void ApplyAlienFeature(Profile profile, IInstruction instruction) {
+			instruction.ApplyAlienFeature(profile);
+		}*/
 
 		/// <summary>
 		/// Generates a human profile that does NOT match the detection rules
 		/// </summary>
-		public Profile GenerateHumanProfile() {
+		/*public Profile GenerateHumanProfile() {
 			if (_currentRule == null) {
 				Debug.LogWarning("No current rule set, generating random profile");
 				return GenerateProfile();
@@ -98,8 +95,8 @@ namespace Assets._Scripts.Managers {
 			Debug.Log($"Generated HUMAN: Age={profile.Age}, Height={profile.Height:F2}, Interests={profile.Interests.Count}");
 			return profile;
 		}
-
-		private void ApplyAlienValue(Profile profile, GeneratedInstruction instruction) {
+*/
+		/*private void ApplyAlienValue(Profile profile, GeneratedInstruction instruction) {
 			var config = instruction.NumericConfig;
 			var colorConfig = instruction.ColorConfig;
 
@@ -131,7 +128,7 @@ namespace Assets._Scripts.Managers {
 					break;
 			}
 		}
-
+*//*
 		private void ApplyHumanValue(Profile profile, GeneratedInstruction instruction) {
 			var config = instruction.NumericConfig;
 			var colorConfig = instruction.ColorConfig;
@@ -181,7 +178,7 @@ namespace Assets._Scripts.Managers {
 					break;
 			}
 		}
-
+*//*
 		private int GenerateHumanAge(NumericAttributeConfig config) {
 			int humanMin = Mathf.RoundToInt(config.HumanMin);
 			int humanMax = Mathf.RoundToInt(config.HumanMax);
@@ -252,7 +249,7 @@ namespace Assets._Scripts.Managers {
 				profile.Interests.Add(available[Random.Range(0, available.Count)]);
 			}
 		}
-
+*/
 		private Gender GenerateGender() {
 			float t = Random.value;
 			if (t < 0.33f) {
@@ -311,22 +308,22 @@ namespace Assets._Scripts.Managers {
 				],
 				FaceColor = ProfilePictureGenerationSettings.FaceColors.Colors[
 					Random.Range(0, ProfilePictureGenerationSettings.FaceColors.Colors.Count)
-				].Color,
+				],
 				BackgroundColor = ProfilePictureGenerationSettings.BackgroundColors.Colors[
 					Random.Range(0, ProfilePictureGenerationSettings.BackgroundColors.Colors.Count)
-				].Color,
+				],
 				EyeShapeSprite = ProfilePictureGenerationSettings.EyeShapes[
 					Random.Range(0, ProfilePictureGenerationSettings.EyeShapes.Count)
 				],
 				EyeColor = ProfilePictureGenerationSettings.EyeColors.Colors[
 					Random.Range(0, ProfilePictureGenerationSettings.EyeColors.Colors.Count)
-				].Color,
+				],
 				HairstyleSprite = ProfilePictureGenerationSettings.Hairstyles[
 					Random.Range(0, ProfilePictureGenerationSettings.Hairstyles.Count)
 				],
 				HairColor = ProfilePictureGenerationSettings.HairColors.Colors[
 					Random.Range(0, ProfilePictureGenerationSettings.HairColors.Colors.Count)
-				].Color,
+				],
 				MouthShapeSprite = ProfilePictureGenerationSettings.MouthShapes[
 					Random.Range(0, ProfilePictureGenerationSettings.MouthShapes.Count)
 				],
