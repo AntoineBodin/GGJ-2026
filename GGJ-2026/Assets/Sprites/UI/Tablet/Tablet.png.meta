@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 8f36794c703c84f0abbcd25a66bc8ef8
+guid: 231d59a9d34114901b3fac76bb1a146f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6403648033326365162
-    second: Crack_00_0
-  - first:
-      213: 4648039045659479633
-    second: Crack_00_1
-  - first:
-      213: 1819440767074919673
-    second: Crack_00_2
-  - first:
-      213: 8203761519346873719
-    second: Crack_00_3
+      213: -1803845828464903431
+    second: Tablet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -55,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Crack_00_0
+      name: Tablet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 98
-        width: 11
-        height: 9
+        x: 0
+        y: 0
+        width: 120
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61604faaa0ca127a0800000000000000
-      internalID: -6403648033326365162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crack_00_1
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 4
-        width: 57
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 15ecdaab2e6218040800000000000000
-      internalID: 4648039045659479633
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crack_00_2
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 42
-        width: 15
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f46d53ecb3ff3910800000000000000
-      internalID: 1819440767074919673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Crack_00_3
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 4
-        width: 13
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 77570bee2ad99d170800000000000000
-      internalID: 8203761519346873719
+      spriteID: 9fa77c4b6c377f6e0800000000000000
+      internalID: -1803845828464903431
       vertices: []
       indices: 
       edges: []
@@ -213,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Crack_00_0: -6403648033326365162
-      Crack_00_1: 4648039045659479633
-      Crack_00_2: 1819440767074919673
-      Crack_00_3: 8203761519346873719
+      Tablet_0: -1803845828464903431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

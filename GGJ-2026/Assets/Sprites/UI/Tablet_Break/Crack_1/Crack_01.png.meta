@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 105cafd6fe1704abf8c164539922ffb8
+guid: c7ee374dc7e85498da1d745c3996d7fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -687999180320103734
-    second: Shine_01_0
+      213: -6495600028177760127
+    second: Crack_01_0
   - first:
-      213: -108350428803834476
-    second: Shine_01_1
+      213: -6734559718237532655
+    second: Crack_01_1
   - first:
-      213: 5375397508747846918
-    second: Shine_01_2
+      213: -3602419587615390846
+    second: Crack_01_2
   - first:
-      213: 4975654683434484313
-    second: Shine_01_3
+      213: 8317498954259987174
+    second: Crack_01_3
   - first:
-      213: -1322496940322166955
-    second: Shine_01_4
+      213: 569175839921191973
+    second: Crack_01_4
   - first:
-      213: 6275440335971846563
-    second: Shine_01_5
+      213: 3001808210664765069
+    second: Crack_01_5
   - first:
-      213: -2220231766591792544
-    second: Shine_01_6
+      213: -3542362858845234997
+    second: Crack_01_6
   - first:
-      213: -5523170718884180323
-    second: Shine_01_7
+      213: -1780199451033601133
+    second: Crack_01_7
   - first:
-      213: 2492822212006702498
-    second: Shine_01_8
+      213: -367465077048465389
+    second: Crack_01_8
   - first:
-      213: -4244928319460980967
-    second: Shine_01_9
+      213: -6028339662090235259
+    second: Crack_01_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -73,12 +73,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,13 +140,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shine_01_0
+      name: Crack_01_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 83
-        width: 22
-        height: 25
+        y: 89
+        width: 20
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,19 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac2a243046cb376f0800000000000000
-      internalID: -687999180320103734
+      spriteID: 1808275803efad5a0800000000000000
+      internalID: -6495600028177760127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shine_01_1
+      name: Crack_01_1
       rect:
         serializedVersion: 2
-        x: 57
+        x: 58
         y: 63
-        width: 10
+        width: 8
         height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -177,19 +177,63 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49dd2ebebdf0f7ef0800000000000000
-      internalID: -108350428803834476
+      spriteID: 11e0cc31e990a82a0800000000000000
+      internalID: -6734559718237532655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shine_01_2
+      name: Crack_01_2
       rect:
         serializedVersion: 2
-        x: 89
-        y: 97
-        width: 9
+        x: 90
+        y: 94
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2838644b872a10ec0800000000000000
+      internalID: -3602419587615390846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crack_01_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 84
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea795c1b31bd6370800000000000000
+      internalID: 8317498954259987174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crack_01_4
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 69
+        width: 8
         height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -199,19 +243,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6056f6bdd8f399a40800000000000000
-      internalID: 5375397508747846918
+      spriteID: 52cbc39296e16e700800000000000000
+      internalID: 569175839921191973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shine_01_3
+      name: Crack_01_5
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 42
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d863680d9a098a920800000000000000
+      internalID: 3001808210664765069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crack_01_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 4
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc81ef48fbff6dec0800000000000000
+      internalID: -3542362858845234997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crack_01_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 12
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39bfbcbf7067b47e0800000000000000
+      internalID: -1780199451033601133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crack_01_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 4
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3182a27957086eaf0800000000000000
+      internalID: -367465077048465389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crack_01_9
       rect:
         serializedVersion: 2
         x: 102
-        y: 93
-        width: 7
+        y: 18
+        width: 14
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -221,140 +353,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9520f1b82931d0540800000000000000
-      internalID: 4975654683434484313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shine_01_4
-      rect:
-        serializedVersion: 2
-        x: 110
-        y: 99
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5576e872a0c85ade0800000000000000
-      internalID: -1322496940322166955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shine_01_5
-      rect:
-        serializedVersion: 2
-        x: 107
-        y: 68
-        width: 9
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a982c2acb7d61750800000000000000
-      internalID: 6275440335971846563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shine_01_6
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 40
-        width: 20
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 06a1249b8f62031e0800000000000000
-      internalID: -2220231766591792544
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shine_01_7
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 4
-        width: 15
-        height: 36
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9ec1138e71c953b0800000000000000
-      internalID: -5523170718884180323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shine_01_8
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 4
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2adecd22898489220800000000000000
-      internalID: 2492822212006702498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shine_01_9
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 17
-        width: 15
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 917488d1f2cf615c0800000000000000
-      internalID: -4244928319460980967
+      spriteID: 58296bf4409075ca0800000000000000
+      internalID: -6028339662090235259
       vertices: []
       indices: 
       edges: []
@@ -363,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -373,16 +373,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Shine_01_0: -687999180320103734
-      Shine_01_1: -108350428803834476
-      Shine_01_2: 5375397508747846918
-      Shine_01_3: 4975654683434484313
-      Shine_01_4: -1322496940322166955
-      Shine_01_5: 6275440335971846563
-      Shine_01_6: -2220231766591792544
-      Shine_01_7: -5523170718884180323
-      Shine_01_8: 2492822212006702498
-      Shine_01_9: -4244928319460980967
+      Crack_01_0: -6495600028177760127
+      Crack_01_1: -6734559718237532655
+      Crack_01_2: -3602419587615390846
+      Crack_01_3: 8317498954259987174
+      Crack_01_4: 569175839921191973
+      Crack_01_5: 3001808210664765069
+      Crack_01_6: -3542362858845234997
+      Crack_01_7: -1780199451033601133
+      Crack_01_8: -367465077048465389
+      Crack_01_9: -6028339662090235259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
