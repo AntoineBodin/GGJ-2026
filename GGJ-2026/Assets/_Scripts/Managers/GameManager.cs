@@ -10,6 +10,8 @@ namespace Assets._Scripts.Managers {
 		public GlobalSettings GlobalSettings { get; private set; }
 		[field: SerializeField]
 		public RoundGenerationConfig Config { get; private set; }
+		[field: SerializeField]
+		public GameObject GameOverScreen { get; private set; }
 
 		private uint _remainingLives;
 		public uint RemainingLives {
@@ -94,8 +96,8 @@ namespace Assets._Scripts.Managers {
 				UpdateGameState(GameState.None);
 				Debug.Log("Game Over");
 				// TODO : Show Game Over Screen
+				GameOverScreen.SetActive(true);
 			}
 		}
-
 	}
 }

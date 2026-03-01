@@ -28,9 +28,9 @@ namespace Assets._Scripts.Managers {
 
 		private void HandleNewProfileLoaded(Profile profile, bool hasWon, bool hasDeported, MoveDirection direction) {
 			if (direction == MoveDirection.Left) {
-				scrollViewAnimator.Play("scrollLeft");
+				scrollViewAnimator.Play("SwipeLeft");
 			} else if (direction == MoveDirection.Right) {
-				scrollViewAnimator.Play("scrollRight");
+				scrollViewAnimator.Play("SwipeRight");
 			} else {
 				ProfileManager.Instance.DisplayProfile(profile);
 			}

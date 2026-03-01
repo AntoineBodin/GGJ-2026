@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 52977a6a77efc3743b2ed6d236bb054c
+guid: 59688560a657abe439a0a136dec05537
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2423901941277185884
-    second: ui_button_0
+      213: 7765077620094841923
+    second: ASSLogo_J_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,17 +109,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_button_0
+      name: ASSLogo_J_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 65
-        height: 16
+        width: 30
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4a82bcbd6029c5ed0800000000000000
-      internalID: -2423901941277185884
+      spriteID: 344b61f44f813cb60800000000000000
+      internalID: 7765077620094841923
       vertices: []
       indices: 
       edges: []
@@ -148,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_button_0: -2423901941277185884
+      ASSLogo_J_0: 7765077620094841923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
